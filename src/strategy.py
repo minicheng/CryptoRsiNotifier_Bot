@@ -523,56 +523,56 @@ def analyze_coin(coin):
     short_exit = (status_rd == -3 and rsi_value < 30)
 
     # ===== 5 步時序檢核清單 =====
-    c1_txt = f"(1) 步驟1 RD天圖趨勢 ({'多頭向上' if status_rd==3 else '空頭向下'}, {trend_days}天) {'✅' if cond1_ok else '❌'}"
+    c1_txt = f"(1) 步驟1 天圖RD趨勢 ({'多頭向上' if status_rd==3 else '空頭向下'}, {trend_days}天) {'✅' if cond1_ok else '❌'}"
     if status_rd == 3:
-        c2_txt = f"(2) 步驟2 1h RSI<30 ({cond2_time} RSI={cond2_val:.1f}) {'✅' if cond2_ok else '❌'}" if cond2_time else f"(2) 步驟2 1h RSI<30 (未超賣) ❌"
+        c2_txt = f"(2) 步驟2 1h RSI<30 超賣 ({cond2_time} RSI={cond2_val:.1f}) {'✅' if cond2_ok else '❌'}" if cond2_time else f"(2) 步驟2 1h RSI<30 超賣 (未達超賣) ❌"
         c3_txt = f"(3) 步驟3 6h NTZ轉折 ({cond3_time}) {'✅' if cond3_ok else '❌'}" if cond3_time else f"(3) 步驟3 6h NTZ轉折 (無接續轉折) ❌"
         c4_val_str = f" RSI={cond4_val:.1f}" if cond4_val is not None else ""
-        c4_txt = f"(4) 步驟4 1h RSI<50 ({cond4_time}{c4_val_str}) {'✅' if cond4_ok else '❌'}" if cond4_time else f"(4) 步驟4 1h RSI<50 (未確認) ❌"
+        c4_txt = f"(4) 步驟4 1h RSI<50 蓄勢 ({cond4_time}{c4_val_str}) {'✅' if cond4_ok else '❌'}" if cond4_time else f"(4) 步驟4 1h RSI<50 蓄勢 (未確認) ❌"
         obv_det = "OBV>0" if curr_osc > 0 else ("OBV量縮" if is_shrinking else f"OBV={curr_osc:.0f}")
         c5_txt = f"(5) 步驟5 天圖OBV動能 ({cond5_time} {obv_det}) {'✅' if cond5_ok else '❌'}"
     else:
-        c2_txt = f"(2) 步驟2 1h RSI>70 ({cond2_time} RSI={cond2_val:.1f}) {'✅' if cond2_ok else '❌'}" if cond2_time else f"(2) 步驟2 1h RSI>70 (未超買) ❌"
+        c2_txt = f"(2) 步驟2 1h RSI>70 超買 ({cond2_time} RSI={cond2_val:.1f}) {'✅' if cond2_ok else '❌'}" if cond2_time else f"(2) 步驟2 1h RSI>70 超買 (未達超買) ❌"
         c3_txt = f"(3) 步驟3 6h NTZ轉折 ({cond3_time}) {'✅' if cond3_ok else '❌'}" if cond3_time else f"(3) 步驟3 6h NTZ轉折 (無接續轉折) ❌"
         c4_val_str = f" RSI={cond4_val:.1f}" if cond4_val is not None else ""
-        c4_txt = f"(4) 步驟4 1h RSI>50 ({cond4_time}{c4_val_str}) {'✅' if cond4_ok else '❌'}" if cond4_time else f"(4) 步驟4 1h RSI>50 (未確認) ❌"
+        c4_txt = f"(4) 步驟4 1h RSI>50 弱勢 ({cond4_time}{c4_val_str}) {'✅' if cond4_ok else '❌'}" if cond4_time else f"(4) 步驟4 1h RSI>50 弱勢 (未確認) ❌"
         obv_det = "OBV<0" if curr_osc < 0 else ("OBV量縮" if is_shrinking else f"OBV={curr_osc:.0f}")
         c5_txt = f"(5) 步驟5 天圖OBV動能 ({cond5_time} {obv_det}) {'✅' if cond5_ok else '❌'}"
 
     checklist = [c1_txt, c2_txt, c3_txt, c4_txt, c5_txt]
     conditions_met_count = sum([1 for ok in [cond1_ok, cond2_ok, cond3_ok, cond4_ok, cond5_ok] if ok])
 
-    # ===== 操作建議與注意事項自動生成 =====
+    # ===== 操作建議與注意事項自動生成（專為 5 步時序波段策略設計） =====
     if status_rd == 3:  # 多頭
         if long_entry:
-            action_advice = '🚀 今日滿足 5 步驟嚴格時序共振條件，觸發"合約做多進場訊號"！天圖多頭 + 1h RSI超賣打底 + 6h NTZ轉折 + 1h RSI中軸有利 + 天圖OBV動能確認，可立即建立多單。'
+            action_advice = "滿足 5 步驟嚴格時序共振！天圖多頭順勢 + 1h RSI超賣打底 + 6h NTZ轉折確立 + 1h RSI中軸蓄勢 + 天圖OBV買盤充沛，觸發「合約做多進場訊號」，可順勢建立多單。"
+            caution_note = "進場後請依策略監控 1h RSI，當 1h RSI 衝入超買區 (>70) 時為多單出場訊號；可設防守止損於步驟3 NTZ 轉折低點。"
         elif long_exit:
-            action_advice = 'RSI 已進入超買區(>70)，觸發"合約做多出場訊號"，建議獲利了結多單。'
+            action_advice = "即時 1h RSI 已突破 70 進入極度超買區，短線多頭拉升力道耗盡，觸發「合約做多出場訊號」！"
+            caution_note = "建議分批止盈或全部平倉獲利了結多單，鎖定波段利潤，切勿追高。"
         else:
-            action_advice = f"目前趨勢為多頭向上，已滿足 {conditions_met_count}/5 個時序條件，建議觀望等待全數條件依序共振。"
-
-        if dips_completed >= 2:
-            if in_dip:
-                caution_note = f"⚠️已掉入河中達{dips_completed}次，且目前回測河中，注意趨勢轉折風險！"
+            action_advice = f"天圖趨勢為多頭向上，目前已依序完成 {conditions_met_count}/5 個時序條件，建議觀望等待條件全數共振。"
+            if conditions_met_count == 4:
+                caution_note = "前4步皆已達成，僅待天圖OBV確認（OBV>0 或 量縮收窄），切勿提前搶跑進場。"
+            elif conditions_met_count >= 1:
+                caution_note = "多頭格局延續中，尚未完成完整共振時序，建議保持觀望耐心等待。"
             else:
-                caution_note = f"⚠️已掉入河中達{dips_completed}次，多頭動能稍顯疲態，注意高檔轉折風險！"
-        else:
-            caution_note = "均線支撐良好，目前尚未出現動能竭盡警示。"
+                caution_note = "均線多頭排列良好，目前尚未出現拉回打底轉折訊號。"
     else:  # 空頭
         if short_entry:
-            action_advice = '今日滿足全數共振條件，觸發"合約做空進場訊號"，RSI 超買區 + OBV 賣盤動能 + NTZ 轉折確認，可考慮建立空單。'
+            action_advice = "滿足 5 步驟嚴格時序共振！天圖空頭主趨勢 + 1h RSI超買反彈結束 + 6h NTZ轉折確立 + 1h RSI中軸下行 + 天圖OBV賣盤壓制，觸發「合約做空進場訊號」，可順勢建立空單。"
+            caution_note = "進場後請依策略監控 1h RSI，當 1h RSI 跌入超賣區 (<30) 時為空單出場訊號；可設防守止損於步驟3 NTZ 轉折高點。"
         elif short_exit:
-            action_advice = 'RSI 已進入超賣區(<30)，觸發"合約做空出場訊號"，建議獲利了結空單。'
+            action_advice = "即時 1h RSI 已跌破 30 進入極度超賣區，短線空頭下殺力道耗盡，觸發「合約做空出場訊號」！"
+            caution_note = "建議分批止盈或全部平倉空單，提防超跌強烈反彈。"
         else:
-            action_advice = "目前趨勢向下，空頭格局尚未扭轉，但尚未同時滿足全部進場條件，建議觀望。"
-
-        if dips_completed >= 2:
-            if in_dip:
-                caution_note = f"⚠️已反彈升入河中達{dips_completed}次，且目前回測河中，注意可能轉折風險！"
+            action_advice = f"天圖趨勢為空頭向下，目前已依序完成 {conditions_met_count}/5 個時序條件，建議觀望等待條件全數共振。"
+            if conditions_met_count == 4:
+                caution_note = "前4步皆已達成，僅待天圖OBV確認（OBV<0 或 量縮收窄），切勿提前搶跑進場。"
+            elif conditions_met_count >= 1:
+                caution_note = "空頭格局延續中，尚未完成完整共振時序，建議保持觀望耐心等待。"
             else:
-                caution_note = f"⚠️已反彈升入河中達{dips_completed}次，空頭動能減弱，注意反彈風險！"
-        else:
-            caution_note = "均線下行順暢，目前尚未出現竭盡警示。"
+                caution_note = "均線空頭排列，目前尚未出現反彈衝頂轉折訊號。"
 
     return {
         "symbol": coin.get("symbol", ""),

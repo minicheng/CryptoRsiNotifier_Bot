@@ -267,45 +267,36 @@ def _get_tv_link(coin):
 def _format_overview_coin_line(i, r):
     """格式化總覽列表中的單一幣種資訊列"""
     rd_emoji = "🟢" if r["status_rd"] == 3 else "🔴"
-    change_str = _format_change(r["change"])
+    change_str = _format_change(r.get("change"))
     rsi_val = r.get("rsi", 50.0)
-    ntz_str = "NTZ✅" if r.get("ntz_appeared") else "NTZ❌"
+    conds_cnt = r.get("conditions_met_count", 0)
 
-    dips_cnt = r.get("dips_completed", 0)
-    dip_dates = r.get("dip_dates", [])
-    if dips_cnt == 0:
-        dips_tag = "掉河0"
-    elif dips_cnt == 1:
-        dips_tag = f"掉河1({dip_dates[0]})" if dip_dates else "掉河1"
-    elif dips_cnt == 2:
-        dips_tag = f"掉河2({','.join(dip_dates[:2])}⚠️)" if len(dip_dates) >= 2 else "掉河2⚠️"
-    else:
-        dips_tag = f"掉河{dips_cnt}({','.join(dip_dates[:3])}⚠️)"
-
-    rd_history_str = f"RD{rd_emoji}({r['trend_days']}天|{dips_tag})"
-    sym_display = f"{r['symbol'][:6]:<6s}"
-    price_display = f"{_format_price(r['close'])}"
-
-    sig = ""
+    # 狀態標記
     if r.get("long_entry"):
-        sig = " | 訊號: 🚀合約做多進場"
-    elif r.get("long_exit"):
-        sig = " | 訊號: 🛑合約做多出場"
+        status_tag = "🚀做多進場"
     elif r.get("short_entry"):
-        sig = " | 訊號: 📉合約做空進場"
+        status_tag = "📉做空進場"
+    elif r.get("long_exit"):
+        status_tag = "🛑多單出場"
     elif r.get("short_exit"):
-        sig = " | 訊號: 🔄合約做空出場"
+        status_tag = "🔄空單出場"
+    else:
+        status_tag = f"進度:{conds_cnt}/5"
+
+    rd_trend_str = f"RD{rd_emoji} {r.get('trend_days', 0)}天"
+    sym_display = f"{r['symbol'][:5]:<5s}"
+    price_display = f"{_format_price(r['close']):>9s}"
 
     return (
         f"{i:2d}. {sym_display} | {price_display} | {change_str} | "
-        f"{rd_history_str} | RSI:{rsi_val:.0f} | {ntz_str}{sig}"
+        f"{rd_trend_str} | RSI:{rsi_val:4.1f} | {status_tag}"
     )
 
 
 def format_signals_message(signals, results, scan_time=""):
     """
-    將策略掃描總覽格式化為指定排版的 Telegram 訊息。
-    包含：標題時間、⚡️今日新訊號（第1天）、🟢 RD向上分組、🔴 RD向下分組。
+    將 5 步時序波段策略掃描總覽格式化為 Telegram 訊息。
+    包含：標題時間、⚡️今日觸發進出場訊號、🟢 RD多頭向上分組、🔴 RD空頭向下分組。
 
     Args:
         signals (dict): get_signals() 的回傳值
@@ -318,37 +309,37 @@ def format_signals_message(signals, results, scan_time=""):
     sep = "———————————————————————————————————"
     lines = []
 
-    lines.append("加密貨幣趨勢日報")
+    lines.append("📊 加密貨幣合約波段策略日報（5步時序掃描）")
     if scan_time:
         time_clean = scan_time.replace("-", "/").replace(" (台北時間)", " (台北時區）")
         if "(台北" not in time_clean:
             time_clean += " (台北時區）"
         lines.append(time_clean)
     else:
-        now_str = datetime.datetime.now().strftime("%Y/%m/%d 08:00 (台北時區）")
+        now_str = datetime.datetime.now().strftime("%Y/%m/%d %H:%M (台北時區）")
         lines.append(now_str)
 
     lines.append(sep)
 
-    # ⚡️今日訊號:
+    # ⚡️今日訊號
     new_signals = []
     for r in results:
         sym = r.get("symbol", "")
         if r.get("long_entry"):
-            new_signals.append(f"🚀 {sym}(合約做多進場)")
-        elif r.get("long_exit"):
-            new_signals.append(f"🛑 {sym}(合約做多出場)")
+            new_signals.append(f"🚀 {sym} (合約做多進場 - 5/5條件達成)")
         elif r.get("short_entry"):
-            new_signals.append(f"📉 {sym}(合約做空進場)")
+            new_signals.append(f"📉 {sym} (合約做空進場 - 5/5條件達成)")
+        elif r.get("long_exit"):
+            new_signals.append(f"🛑 {sym} (合約做多出場 - 1h RSI>70 超買獲利了結)")
         elif r.get("short_exit"):
-            new_signals.append(f"🔄 {sym}(合約做空出場)")
+            new_signals.append(f"🔄 {sym} (合約做空出場 - 1h RSI<30 超賣獲利了結)")
 
-    lines.append("⚡️今日訊號:")
+    lines.append("⚡️ 今日觸發進出場訊號:")
     if new_signals:
         for s in new_signals:
-            lines.append(s)
+            lines.append(f" • {s}")
     else:
-        lines.append("無")
+        lines.append(" • 今日無新進出場訊號")
 
     lines.append(sep)
 
@@ -356,26 +347,28 @@ def format_signals_message(signals, results, scan_time=""):
     up_coins = [r for r in results if r.get("status_rd") == 3]
     down_coins = [r for r in results if r.get("status_rd") == -3]
 
-    # 🟢 RD向上
-    lines.append(f"🟢 RD向上：共{len(up_coins)}幣種")
+    # 🟢 RD多頭向上
+    lines.append(f"🟢 RD多頭向上：共 {len(up_coins)} 個幣種")
     for i, r in enumerate(up_coins, 1):
         lines.append(_format_overview_coin_line(i, r))
 
     lines.append(sep)
 
-    # 🔴 RD向下
-    lines.append(f"🔴 RD向下：共{len(down_coins)}幣種")
+    # 🔴 RD空頭向下
+    lines.append(f"🔴 RD空頭向下：共 {len(down_coins)} 個幣種")
     for i, r in enumerate(down_coins, 1):
         lines.append(_format_overview_coin_line(i, r))
 
     lines.append(sep)
+    lines.append("💡 策略核心時序：天圖RD ➜ 1h RSI極值 ➜ 6h NTZ轉折 ➜ 1h RSI中軸 ➜ 天圖OBV")
 
     return "\n".join(lines)
 
 
 def format_coin_card_caption(r):
     """
-    產生個幣圖文卡片說明文案（包含收盤價、操作建議、掉河次數、注意事項、5大條件與 TradingView 連結）。
+    產生個幣圖文卡片說明文案（專為 5 步時序波段策略設計）。
+    包含：訊號狀態標題、收盤價、天圖趨勢、1h RSI、5大時序檢核步驟、操作建議、風控提醒、TradingView 連結。
 
     Args:
         r (dict): analyze_coin 回傳的幣種分析結果
@@ -389,51 +382,64 @@ def format_coin_card_caption(r):
     name = r.get("name", symbol)
     rank = r.get("rank", 1)
     close = r.get("close", 0.0)
+    change_str = _format_change(r.get("change"))
 
     # 最新完成日 K 日期
-    bar_date = r.get("latest_bar_date", "")  # e.g. "09/11"
+    bar_date = r.get("latest_bar_date", "")
     if bar_date.startswith("0"):
         bar_date_display = bar_date[1:]
     else:
         bar_date_display = bar_date if bar_date else "今日"
 
-    lines.append(f"市值排名{rank}: {symbol} ({name})")
-    lines.append(f"{bar_date_display}收盤價： {_format_price(close)}")
+    # 訊號狀態頂部 Header
+    if r.get("long_entry"):
+        header = f"🚀【合約做多進場訊號】#{rank} {symbol} ({name})"
+    elif r.get("short_entry"):
+        header = f"📉【合約做空進場訊號】#{rank} {symbol} ({name})"
+    elif r.get("long_exit"):
+        header = f"🛑【合約做多出場訊號】#{rank} {symbol} ({name})"
+    elif r.get("short_exit"):
+        header = f"🔄【合約做空出場訊號】#{rank} {symbol} ({name})"
+    else:
+        header = f"🔍【策略監控中】#{rank} {symbol} ({name})"
+
+    lines.append(header)
+    lines.append(f"💰 {bar_date_display} 收盤價：{_format_price(close)} ({change_str})")
+    lines.append("")
 
     status_rd = r.get("status_rd", 3)
-    if status_rd == 3:
-        lines.append("🟢 RD向上：")
-    else:
-        lines.append("🔴 RD向下：")
+    rd_txt = "🟢 RD多頭向上" if status_rd == 3 else "🔴 RD空頭向下"
+    trend_days = r.get("trend_days", 0)
+    rsi_val = r.get("rsi", 50.0)
+    conditions_met_count = r.get("conditions_met_count", 0)
 
-    lines.append(f"已過河拆橋天數：{r.get('trend_days', 0)}天")
-    lines.append(f"RSI(1h)：{r.get('rsi', 50.0):.1f}")
-    lines.append(f"操作建議：{r.get('action_advice', '')}")
-
-    dips_cnt = r.get("dips_completed", 0)
-    dip_dates = r.get("dip_dates", [])
-    chinese_nums = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二", "十三", "十四", "十五"]
-    if dips_cnt > 0 and dip_dates:
-        dates_detail = "、".join(
-            f"掉入第{chinese_nums[k] if k < len(chinese_nums) else str(k+1)}次({d})"
-            for k, d in enumerate(dip_dates)
-        )
-        lines.append(f"已掉入河中次數：{dips_cnt}次；{dates_detail}。")
-    else:
-        lines.append(f"已掉入河中次數：0次。")
-
-    lines.append(f"注意事項：{r.get('caution_note', '')}")
+    lines.append("📊 策略指標狀態：")
+    lines.append(f" • 天圖主趨勢：{rd_txt} (已維持 {trend_days} 天)")
+    lines.append(f" • 即時 1h RSI：{rsi_val:.1f}")
+    lines.append(f" • 5 步時序進度：{conditions_met_count} / 5 條件滿足")
+    lines.append("")
 
     checklist = r.get("checklist", [])
     if checklist:
-        lines.append("")
-        lines.append(f"📋 策略 5 步驗證 ({r.get('conditions_met_count', 0)}/5):")
+        lines.append("📋 策略 5 步時序檢核：")
         for item in checklist:
             lines.append(f" • {item}")
+        lines.append("")
+
+    action_advice = r.get("action_advice", "")
+    if action_advice:
+        lines.append(f"💡 操作建議：")
+        lines.append(action_advice)
+        lines.append("")
+
+    caution_note = r.get("caution_note", "")
+    if caution_note:
+        lines.append(f"⚠️ 注意事項：")
+        lines.append(caution_note)
 
     # 對所有文字行進行 HTML 轉義，避免 <30, <50, >0 等字元導致 Telegram HTML 解析失敗
     escaped_lines = [html.escape(line) for line in lines]
     escaped_lines.append("")
-    escaped_lines.append(f'<a href="{_get_tv_link(r)}">🔗Tradingview</a>')
+    escaped_lines.append(f'<a href="{_get_tv_link(r)}">🔗TradingView 合約圖表</a>')
 
     return "\n".join(escaped_lines)

@@ -104,6 +104,8 @@ def generate_chart_step1_rd(coin_data, output_dir="charts", n_display=75):
     trend_days = coin_data.get("trend_days", 0)
     dips_completed = coin_data.get("dips_completed", 0)
     cond1_ok = coin_data.get("cond1_ok", (status_rd in (3, -3)))
+    flip_date = coin_data.get("flip_date", "")
+    flip_str = f" (翻轉日: {flip_date})" if flip_date else ""
 
     display_bars = ohlcv[-n_display:] if len(ohlcv) >= n_display else ohlcv
     n_bars = len(display_bars)
@@ -140,7 +142,7 @@ def generate_chart_step1_rd(coin_data, output_dir="charts", n_display=75):
 
     ax1.set_title(
         f"【步驟1: RD趨勢 - 天圖】 {symbol} ({name}) | {_format_chart_price(close_price)} ({change*100:+.1f}%)\n"
-        f"趨勢狀態: {trend_tag} | 已過河拆橋: {trend_days}天 | 掉河次數: {dips_completed}次 | 步驟1: {cond1_str}",
+        f"趨勢狀態: {trend_tag} | 趨勢維持: {trend_days}天{flip_str} | 步驟1: {cond1_str}",
         color="#ffffff", fontsize=11, fontweight="bold", pad=8
     )
 

@@ -283,13 +283,13 @@ def test_telegram_message_formatting():
     ]
     signals = {"long_entry": [], "long_exit": [], "short_entry": [], "short_exit": []}
     overview = format_signals_message(signals, mock_results, "2026/09/29 14:35")
-    assert "加密貨幣趨勢日報" in overview
+    assert "加密貨幣合約波段策略日報" in overview
     assert "BTC" in overview
-    assert "RSI:50" in overview
-    assert "NTZ✅" in overview
+    assert "49.6" in overview
+    assert "進度:3/5" in overview
 
     caption = format_coin_card_caption(mock_results[0])
-    assert "Tradingview" in caption
+    assert "TradingView" in caption
     print("  ✅ Telegram 訊息與卡片排版測試通過")
 
 
