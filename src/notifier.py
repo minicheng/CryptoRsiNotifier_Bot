@@ -10,7 +10,15 @@ import requests
 import datetime
 import urllib.parse
 import json
+import html
 from config import TELEGRAM_API_URL, TELEGRAM_PHOTO_URL, TELEGRAM_MEDIA_GROUP_URL, TV_CHART_URL
+
+
+def _clean_credentials(bot_token=None, chat_id=None):
+    """清理 Token 與 Chat ID 的多餘引號與空白"""
+    token = (bot_token or os.environ.get("TELEGRAM_BOT_TOKEN", "")).strip().strip("'\"")
+    cid = str(chat_id or os.environ.get("TELEGRAM_CHAT_ID", "")).strip().strip("'\"")
+    return token, cid
 
 
 def send_telegram_message(text, bot_token=None, chat_id=None, parse_mode="HTML"):
@@ -21,13 +29,12 @@ def send_telegram_message(text, bot_token=None, chat_id=None, parse_mode="HTML")
         text (str): 訊息內容（支援 HTML 格式）
         bot_token (str): Bot Token（預設從環境變數讀取）
         chat_id (str): Chat ID（預設從環境變數讀取）
-        parse_mode (str): 解析模式，預設 HTML
+        parse_mode (str): 解析模式，預設 HTML；若為 None 則為純文字
 
     Returns:
         bool: 發送成功與否
     """
-    token = bot_token or os.environ.get("TELEGRAM_BOT_TOKEN", "")
-    cid = chat_id or os.environ.get("TELEGRAM_CHAT_ID", "")
+    token, cid = _clean_credentials(bot_token, chat_id)
 
     if not token or not cid:
         print("❌ 缺少 TELEGRAM_BOT_TOKEN 或 TELEGRAM_CHAT_ID")
@@ -37,22 +44,31 @@ def send_telegram_message(text, bot_token=None, chat_id=None, parse_mode="HTML")
     payload = {
         "chat_id": cid,
         "text": text,
-        "parse_mode": parse_mode,
         "disable_web_page_preview": True,
     }
+    if parse_mode:
+        payload["parse_mode"] = parse_mode
 
     try:
         resp = requests.post(url, json=payload, timeout=30)
-        resp.raise_for_status()
-        result = resp.json()
-        if result.get("ok"):
+        try:
+            result = resp.json()
+        except Exception:
+            result = {}
+
+        if resp.status_code == 200 and result.get("ok"):
             print("✅ Telegram 總覽訊息發送成功")
             return True
         else:
-            print(f"❌ Telegram API 錯誤: {result}")
+            desc = result.get("description", resp.text)
+            print(f"❌ Telegram 發送失敗: HTTP {resp.status_code} - {desc}")
+            # 若為 HTML 格式解析錯誤，自動降級以純文字重試
+            if parse_mode and ("can't parse entities" in desc.lower() or "entity" in desc.lower()):
+                print("🔄 偵測到 HTML 解析異常，嘗試以純文字模式重發...")
+                return send_telegram_message(text, bot_token=token, chat_id=cid, parse_mode=None)
             return False
     except requests.RequestException as e:
-        print(f"❌ Telegram 發送失敗: {e}")
+        print(f"❌ Telegram 連線失敗: {e}")
         return False
 
 
@@ -65,13 +81,12 @@ def send_telegram_photo(photo_path, caption="", bot_token=None, chat_id=None, pa
         caption (str): 圖片附帶說明文案（最高 1024 字元）
         bot_token (str): Bot Token
         chat_id (str): Chat ID
-        parse_mode (str): 解析模式，預設 HTML
+        parse_mode (str): 解析模式，預設 HTML；若為 None 則為純文字
 
     Returns:
         bool: 發送成功與否
     """
-    token = bot_token or os.environ.get("TELEGRAM_BOT_TOKEN", "")
-    cid = chat_id or os.environ.get("TELEGRAM_CHAT_ID", "")
+    token, cid = _clean_credentials(bot_token, chat_id)
 
     if not token or not cid:
         print("❌ 缺少 TELEGRAM_BOT_TOKEN 或 TELEGRAM_CHAT_ID")
@@ -88,19 +103,28 @@ def send_telegram_photo(photo_path, caption="", bot_token=None, chat_id=None, pa
             data = {
                 "chat_id": cid,
                 "caption": caption[:1024],
-                "parse_mode": parse_mode,
             }
+            if parse_mode:
+                data["parse_mode"] = parse_mode
+
             resp = requests.post(url, data=data, files=files, timeout=35)
-            resp.raise_for_status()
-            result = resp.json()
-            if result.get("ok"):
+            try:
+                result = resp.json()
+            except Exception:
+                result = {}
+
+            if resp.status_code == 200 and result.get("ok"):
                 print(f"✅ Telegram 圖文卡片發送成功 ({os.path.basename(photo_path)})")
                 return True
             else:
-                print(f"⚠️ Telegram Photo 回傳錯誤: {result.get('description')}")
+                desc = result.get("description", resp.text)
+                print(f"❌ 發送 Telegram 圖片失敗: HTTP {resp.status_code} - {desc}")
+                if parse_mode and ("can't parse entities" in desc.lower() or "entity" in desc.lower()):
+                    print("🔄 嘗試以純文字模式重發圖片...")
+                    return send_telegram_photo(photo_path, caption=caption, bot_token=token, chat_id=cid, parse_mode=None)
                 return False
     except Exception as e:
-        print(f"❌ 發送 Telegram 圖片失敗: {e}")
+        print(f"❌ 發送 Telegram 圖片例外異常: {e}")
         return False
 
 
@@ -119,8 +143,7 @@ def send_telegram_media_group(photo_paths, caption="", bot_token=None, chat_id=N
     Returns:
         bool: 發送成功與否
     """
-    token = bot_token or os.environ.get("TELEGRAM_BOT_TOKEN", "")
-    cid = chat_id or os.environ.get("TELEGRAM_CHAT_ID", "")
+    token, cid = _clean_credentials(bot_token, chat_id)
 
     if not token or not cid:
         print("❌ 缺少 TELEGRAM_BOT_TOKEN 或 TELEGRAM_CHAT_ID")
@@ -148,7 +171,8 @@ def send_telegram_media_group(photo_paths, caption="", bot_token=None, chat_id=N
             }
             if i == 0 and caption:
                 item["caption"] = caption[:1024]
-                item["parse_mode"] = parse_mode
+                if parse_mode:
+                    item["parse_mode"] = parse_mode
             media.append(item)
             fh = open(path, "rb")
             file_handles.append(fh)
@@ -159,17 +183,20 @@ def send_telegram_media_group(photo_paths, caption="", bot_token=None, chat_id=N
             "media": json.dumps(media),
         }
         resp = requests.post(url, data=data, files=files, timeout=60)
-        resp.raise_for_status()
-        result = resp.json()
-        if result.get("ok"):
+        try:
+            result = resp.json()
+        except Exception:
+            result = {}
+
+        if resp.status_code == 200 and result.get("ok"):
             print(f"✅ Telegram 多圖相簿發送成功 (共 {len(media)} 張圖表)")
             return True
         else:
-            print(f"⚠️ Telegram sendMediaGroup 回傳錯誤: {result.get('description')}")
-            # fallback: 發送第一張
+            desc = result.get("description", resp.text)
+            print(f"❌ 發送 Telegram MediaGroup 失敗: HTTP {resp.status_code} - {desc}，嘗試退回單張發送")
             return send_telegram_photo(valid_paths[0], caption, bot_token=token, chat_id=cid, parse_mode=parse_mode)
     except Exception as e:
-        print(f"❌ 發送 Telegram MediaGroup 失敗: {e}，嘗試退回單張發送")
+        print(f"❌ 發送 Telegram MediaGroup 例外異常: {e}，嘗試退回單張發送")
         return send_telegram_photo(valid_paths[0], caption, bot_token=token, chat_id=cid, parse_mode=parse_mode)
     finally:
         for fh in file_handles:
@@ -404,7 +431,9 @@ def format_coin_card_caption(r):
         for item in checklist:
             lines.append(f" • {item}")
 
-    lines.append("")
-    lines.append(f'<a href="{_get_tv_link(r)}">🔗Tradingview</a>')
+    # 對所有文字行進行 HTML 轉義，避免 <30, <50, >0 等字元導致 Telegram HTML 解析失敗
+    escaped_lines = [html.escape(line) for line in lines]
+    escaped_lines.append("")
+    escaped_lines.append(f'<a href="{_get_tv_link(r)}">🔗Tradingview</a>')
 
-    return "\n".join(lines)
+    return "\n".join(escaped_lines)

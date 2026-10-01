@@ -199,9 +199,9 @@ def main():
             print(caption)
             print("-" * 40)
     else:
-        # 1. 先發送總覽訊息
+        # 1. 先發送總覽訊息（純文字模式最安全可靠）
         print("📡 發送總覽文字日報...")
-        send_telegram_message(overview_message)
+        send_telegram_message(overview_message, parse_mode=None)
         time.sleep(1.0)
 
         # 2. 逐一產生並發送個幣圖文相簿 (5 張檢核圖)
