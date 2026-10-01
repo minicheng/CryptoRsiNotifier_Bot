@@ -271,17 +271,19 @@ def _format_overview_coin_line(i, r):
     rsi_val = r.get("rsi", 50.0)
     conds_cnt = r.get("conditions_met_count", 0)
 
-    # 狀態標記
-    if r.get("long_entry"):
-        status_tag = "🚀新做多進場"
-    elif r.get("short_entry"):
-        status_tag = "📉新做空進場"
-    elif r.get("long_exit"):
+    # 狀態標記（出場優先於進場與持倉）
+    if r.get("long_exit"):
         status_tag = "🛑多單出場"
     elif r.get("short_exit"):
         status_tag = "🔄空單出場"
+    elif r.get("long_entry"):
+        status_tag = "🚀新做多進場"
+    elif r.get("short_entry"):
+        status_tag = "📉新做空進場"
     elif r.get("in_position"):
         status_tag = "持倉中(5/5已進場)"
+    elif r.get("has_already_exited"):
+        status_tag = "已出場(觀望中)"
     else:
         status_tag = f"進度:{conds_cnt}/5"
 
@@ -301,7 +303,7 @@ def format_signals_message(signals, results, scan_time=""):
     包含：標題時間、⚡️今日觸發進出場訊號、🟢 RD多頭向上分組、🔴 RD空頭向下分組。
 
     Args:
-        signals (dict): get_signals() 的回傳值
+        signals (dict): get_signals() 或 filter_new_signals() 的回傳值
         results (list[dict]): 所有幣種的分析結果
         scan_time (str): 掃描時間
 
@@ -323,22 +325,32 @@ def format_signals_message(signals, results, scan_time=""):
 
     lines.append(sep)
 
-    # ⚡️今日訊號
-    new_signals = []
-    for r in results:
-        sym = r.get("symbol", "")
-        if r.get("long_entry"):
-            new_signals.append(f"🚀 {sym} (合約做多進場 - 5/5條件達成)")
-        elif r.get("short_entry"):
-            new_signals.append(f"📉 {sym} (合約做空進場 - 5/5條件達成)")
-        elif r.get("long_exit"):
-            new_signals.append(f"🛑 {sym} (合約做多出場 - 1h RSI>70 超買獲利了結)")
-        elif r.get("short_exit"):
-            new_signals.append(f"🔄 {sym} (合約做空出場 - 1h RSI<30 超賣獲利了結)")
+    # ⚡️今日訊號（出場優先於進場列出）
+    new_signals_list = []
+    if isinstance(signals, dict) and any(signals.values()):
+        for r in signals.get("long_exit", []):
+            new_signals_list.append(f"🛑 {r.get('symbol')} (合約做多出場 - 1h RSI>70 超買獲利了結)")
+        for r in signals.get("short_exit", []):
+            new_signals_list.append(f"🔄 {r.get('symbol')} (合約做空出場 - 1h RSI<30 超賣獲利了結)")
+        for r in signals.get("long_entry", []):
+            new_signals_list.append(f"🚀 {r.get('symbol')} (合約做多進場 - 5/5條件達成)")
+        for r in signals.get("short_entry", []):
+            new_signals_list.append(f"📉 {r.get('symbol')} (合約做空進場 - 5/5條件達成)")
+    else:
+        for r in results:
+            sym = r.get("symbol", "")
+            if r.get("long_exit"):
+                new_signals_list.append(f"🛑 {sym} (合約做多出場 - 1h RSI>70 超買獲利了結)")
+            elif r.get("short_exit"):
+                new_signals_list.append(f"🔄 {sym} (合約做空出場 - 1h RSI<30 超賣獲利了結)")
+            elif r.get("long_entry"):
+                new_signals_list.append(f"🚀 {sym} (合約做多進場 - 5/5條件達成)")
+            elif r.get("short_entry"):
+                new_signals_list.append(f"📉 {sym} (合約做空進場 - 5/5條件達成)")
 
     lines.append("⚡️ 今日觸發進出場訊號:")
-    if new_signals:
-        for s in new_signals:
+    if new_signals_list:
+        for s in new_signals_list:
             lines.append(f" • {s}")
     else:
         lines.append(" • 今日無新進出場訊號")
@@ -393,15 +405,17 @@ def format_coin_card_caption(r):
     else:
         bar_date_display = bar_date if bar_date else "今日"
 
-    # 訊號狀態頂部 Header
-    if r.get("long_entry"):
-        header = f"🚀【合約做多進場訊號】#{rank} {symbol} ({name})"
-    elif r.get("short_entry"):
-        header = f"📉【合約做空進場訊號】#{rank} {symbol} ({name})"
-    elif r.get("long_exit"):
+    # 訊號狀態頂部 Header（出場訊號優先於進場與持倉）
+    if r.get("long_exit"):
         header = f"🛑【合約做多出場訊號】#{rank} {symbol} ({name})"
     elif r.get("short_exit"):
         header = f"🔄【合約做空出場訊號】#{rank} {symbol} ({name})"
+    elif r.get("long_entry"):
+        header = f"🚀【合約做多進場訊號】#{rank} {symbol} ({name})"
+    elif r.get("short_entry"):
+        header = f"📉【合約做空進場訊號】#{rank} {symbol} ({name})"
+    elif r.get("in_position"):
+        header = f"💼【波段持倉中】#{rank} {symbol} ({name})"
     else:
         header = f"🔍【策略監控中】#{rank} {symbol} ({name})"
 
@@ -418,7 +432,14 @@ def format_coin_card_caption(r):
     lines.append("📊 策略指標狀態：")
     lines.append(f" • 天圖主趨勢：{rd_txt} (已維持 {trend_days} 天)")
     lines.append(f" • 即時 1h RSI：{rsi_val:.1f}")
-    lines.append(f" • 5 步時序進度：{conditions_met_count} / 5 條件滿足")
+    if r.get("long_exit"):
+        lines.append(f" • 訊號狀態：🛑 合約做多出場觸發 (1h RSI={rsi_val:.1f} > 70 超買獲利出場)")
+    elif r.get("short_exit"):
+        lines.append(f" • 訊號狀態：🔄 合約做空出場觸發 (1h RSI={rsi_val:.1f} < 30 超賣獲利出場)")
+    elif r.get("has_already_exited"):
+        lines.append(" • 訊號狀態：波段已獲利出場結案 (觀望新時序中)")
+    else:
+        lines.append(f" • 5 步時序進度：{conditions_met_count} / 5 條件滿足")
     lines.append("")
 
     checklist = r.get("checklist", [])

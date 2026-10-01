@@ -97,7 +97,7 @@ class SignalStateManager:
                     t_time = item.get("cond4_time", "")
                 else:
                     s_key = item.get("exit_signal_key") or item.get("signal_key")
-                    t_time = item.get("latest_bar_date", "")
+                    t_time = item.get("exit_time", "") or item.get("latest_bar_date", "")
 
                 if s_key:
                     self.record_notified(s_key, symbol, sig_type, trigger_time=t_time)
