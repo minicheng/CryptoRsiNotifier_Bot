@@ -664,6 +664,7 @@ def analyze_coin(coin):
         "rank": coin.get("rank", 0),
         "market_cap": coin.get("market_cap", 0),
         "close": close,
+        "live_price": coin.get("live_price") or (ohlcv_1h[-1][4] if ohlcv_1h else close),
         "open": open_price,
         "high": high,
         "low": low,

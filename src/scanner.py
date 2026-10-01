@@ -353,13 +353,20 @@ def fetch_top_coins(top_n=TOP_N_COINS, lookback=LOOKBACK_BARS):
                 if len(completed_bars) >= 10 else c["vol"]
             )
 
-            # === 1h K（fresh fetch，RSI 計算用，含分頁確保 200 根）===
+            # === 1h K（fresh fetch，即時 RSI 計算用，含分頁確保 200 根）===
+            # 支援即時監控：保留當前正在跳動的最新 1h K 棒（不使用 [:-1] 切除），以最新成交價即時計算步驟 2、4 與出場 RSI
             try:
                 ohlcv_1h = _fetch_ohlcv_paged(exchange, pair, "1h", LOOKBACK_BARS_1H)
-                c["ohlcv_1h"] = ohlcv_1h[:-1] if ohlcv_1h and len(ohlcv_1h) > 1 else (ohlcv_1h or [])
+                c["ohlcv_1h"] = ohlcv_1h or []
             except Exception as e:
                 print(f"  ⚠️ {pair} 1h K 線抓取失敗: {e}")
                 c["ohlcv_1h"] = []
+
+            # 記錄最新即時成交價
+            if c["ohlcv_1h"]:
+                c["live_price"] = c["ohlcv_1h"][-1][4]
+            else:
+                c["live_price"] = c["close"]
 
             time.sleep(0.05)
 

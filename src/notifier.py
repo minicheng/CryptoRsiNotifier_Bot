@@ -420,7 +420,11 @@ def format_coin_card_caption(r):
         header = f"🔍【策略監控中】#{rank} {symbol} ({name})"
 
     lines.append(header)
-    lines.append(f"💰 {bar_date_display} 收盤價：{_format_price(close)} ({change_str})")
+    live_price = r.get("live_price")
+    if live_price and live_price != close:
+        lines.append(f"💰 {bar_date_display} 收盤價：{_format_price(close)} ({change_str}) | 即時現價：{_format_price(live_price)}")
+    else:
+        lines.append(f"💰 {bar_date_display} 收盤價：{_format_price(close)} ({change_str})")
     lines.append("")
 
     status_rd = r.get("status_rd", 3)
