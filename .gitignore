@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# Virtual env
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Charts and scratch
+charts/
+charts_test/
+scratch/
+
+# Scanner daily cache (managed by GitHub Actions cache action)
+cache/

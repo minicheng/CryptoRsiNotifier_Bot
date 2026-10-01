@@ -1,0 +1,67 @@
+name: FT 波段策略訊號監控
+
+on:
+  # 手動觸發（測試用）
+  workflow_dispatch:
+
+  # 由 Cron-job.org 每 30~60 分鐘精準觸發
+  # 設定方式：在 Cron-job.org 建立 HTTP POST job，打以下 endpoint：
+  #   URL: https://api.github.com/repos/{owner}/{repo}/dispatches
+  #   Method: POST
+  #   Headers:
+  #     Authorization: token {PAT}   (GitHub PAT，需 repo 權限)
+  #     Accept: application/vnd.github.v3+json
+  #     Content-Type: application/json
+  #   Body: {"event_type": "signal-scan"}
+  repository_dispatch:
+    types: [signal-scan]
+
+# 避免同時跑多個掃描任務
+concurrency:
+  group: signal-scan
+  cancel-in-progress: true
+
+jobs:
+  scan-and-notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Matplotlib CJK font
+        run: |
+          sudo apt-get install -y fonts-noto-cjk
+          python -c "import matplotlib; matplotlib.font_manager._load_fontmanager(try_read_cache=False)" || true
+
+      # 先取今天 UTC 日期供 cache key 用（必須在 cache restore 之前）
+      - name: Get today UTC date
+        id: date
+        run: echo "date=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
+
+      # 快取 scanner 的天圖日K + CoinGecko 幣種清單（以 UTC 日期為 key，每天自動失效）
+      - name: Restore scanner daily cache
+        uses: actions/cache@v4
+        with:
+          path: cache/
+          # key 含今天 UTC 日期，每天自動 miss → 重抓一次；當天其餘 runs 全部命中
+          key: scanner-daily-${{ steps.date.outputs.date }}
+          restore-keys: scanner-daily-
+
+      - name: Run FT Strategy Scanner
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SCANNER_CACHE_DIR: cache
+        run: python src/main.py
+        # 無進出場訊號時 main.py 靜默結束，有訊號才推播 TG
