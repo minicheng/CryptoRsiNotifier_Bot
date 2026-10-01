@@ -25,6 +25,8 @@ jobs:
   scan-and-notify:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -58,10 +60,37 @@ jobs:
           key: scanner-daily-${{ steps.date.outputs.date }}
           restore-keys: scanner-daily-
 
+      # 還原已推播訊號狀態快取 (state/)
+      - name: Restore signal state cache
+        uses: actions/cache/restore@v4
+        with:
+          path: state/
+          key: signal-state-${{ github.run_id }}
+          restore-keys: |
+            signal-state-
+
       - name: Run FT Strategy Scanner
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           SCANNER_CACHE_DIR: cache
         run: python src/main.py
-        # 無進出場訊號時 main.py 靜默結束，有訊號才推播 TG
+        # 無「新增」進出場訊號時 main.py 靜默結束，有新訊號才推播 TG
+
+      # 儲存訊號狀態快取
+      - name: Save signal state cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: state/
+          key: signal-state-${{ github.run_id }}
+
+      # 若狀態檔有更新，自動提交並推回倉庫，永久保存狀態（[skip ci] 避免觸發額外 workflow）
+      - name: Commit and push signal state
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add state/
+          git diff --staged --quiet || (git commit -m "chore(state): record notified signals [skip ci]" && git push)
+

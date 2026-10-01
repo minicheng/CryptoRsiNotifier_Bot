@@ -52,3 +52,8 @@ CHARTS_DIR = "charts"   # 圖表快取儲存目錄
 # === TradingView 圖表連結前綴 ===
 TV_CHART_URL = "https://tw.tradingview.com/chart/?symbol={symbol}"
 
+# === 訊號狀態紀錄與推播去重設定 ===
+STATE_DIR = "state"
+NOTIFIED_SIGNALS_FILE = "state/notified_signals.json"
+MAX_SIGNAL_AGE_HOURS = 24  # 訊號最長有效時效（超過 24 小時前的舊訊號不當作當前新訊號推播）
+

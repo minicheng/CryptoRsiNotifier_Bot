@@ -35,6 +35,7 @@ from notifier import (
 )
 from chart_generator import generate_coin_chart, generate_all_strategy_charts
 from config import TOP_N_COINS, CARD_SEND_MODE, CARD_TOP_N, CARD_MAX_FEATURED, CHARTS_DIR
+from state_manager import SignalStateManager
 
 
 def select_card_targets(results, signals, mode=CARD_SEND_MODE, top_n=CARD_TOP_N, max_featured=CARD_MAX_FEATURED):
@@ -144,26 +145,31 @@ def main():
     if total_signals == 0:
         print("  💤 今日無進出場訊號")
 
-    # === Step 3: 判斷是否有進出場訊號 ===
-    # 統計所有進出場訊號（做多進場、做空進場、做多出場、做空出場）
-    active_signals = [
+    # === Step 3: 判斷是否有「新增」進出場訊號（狀態比對與去重）===
+    state_mgr = SignalStateManager()
+    state_mgr.prune_old_records(max_days=14)
+
+    # 過濾出本次掃描中「尚未推播過」的全新訊號
+    new_signals = state_mgr.filter_new_signals(signals)
+
+    active_new_items = [
         item for key in ("long_entry", "short_entry", "long_exit", "short_exit")
-        for item in signals.get(key, [])
+        for item in new_signals.get(key, [])
     ]
-    has_signal = len(active_signals) > 0
+    has_new_signal = len(active_new_items) > 0
 
-    if not has_signal:
-        print("\n💤 本次掃描無進出場訊號 — 靜默結束，不推播 Telegram。")
+    if not has_new_signal:
+        print("\n💤 本次掃描無「新增」進出場訊號（現有訊號先前已推播過）— 靜默結束，不重複推播 Telegram。")
         print(f"\n✅ 合約波段策略掃描完成 — {scan_time}")
-        return  # 無訊號直接結束，不做任何推播
+        return  # 無新訊號直接結束，不做任何推播
 
-    print(f"\n🚨 偵測到 {len(active_signals)} 個進出場訊號！準備推播 Telegram...")
+    print(f"\n🚨 偵測到 {len(active_new_items)} 個全新進出場訊號！準備推播 Telegram...")
 
     # === Step 4: 發送通知 ===
     print("\nStep 4: 格式化並發送 Telegram 總覽訊息與個幣圖文卡片...")
-    overview_message = format_signals_message(signals, results, scan_time)
-    # 只推播有進出場訊號的幣種
-    signal_symbols = {item["symbol"] for item in active_signals}
+    overview_message = format_signals_message(new_signals, results, scan_time)
+    # 只針對這批新訊號幣種產生檢核圖表卡片
+    signal_symbols = {item["symbol"] for item in active_new_items}
     card_targets = [r for r in results if r.get("symbol") in signal_symbols]
 
     # 檢查是否為 dry-run 模式（環境變數或 CLI 參數）
@@ -198,6 +204,7 @@ def main():
             print("📝 卡片文案:")
             print(caption)
             print("-" * 40)
+        print(f"\n💾 [DRY-RUN 模式] 略過寫入狀態檔。")
     else:
         # 1. 先發送總覽訊息（純文字模式最安全可靠）
         print("📡 發送總覽文字日報...")
@@ -223,6 +230,10 @@ def main():
                 print(f"⚠️ 發送 {sym} 5圖卡片失敗: {e}")
 
             time.sleep(1.0)  # 避免 Telegram rate limit
+
+        # 3. 發送完成後，將這批新訊號記錄至狀態檔
+        recorded_cnt = state_mgr.mark_all_as_notified(new_signals)
+        print(f"💾 已記錄 {recorded_cnt} 個新訊號至狀態檔 ({state_mgr.state_file})")
 
         print(f"\n🎉 推播完成！成功發送總覽及 {success_cards}/{len(card_targets)} 組個幣 5 圖時序檢核卡片。")
 

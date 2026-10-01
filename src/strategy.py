@@ -31,10 +31,11 @@
 import datetime
 
 try:
-    from config import RSI_PERIOD, OBV_EMA_PERIOD
+    from config import RSI_PERIOD, OBV_EMA_PERIOD, MAX_SIGNAL_AGE_HOURS
 except ImportError:
     RSI_PERIOD = 14
     OBV_EMA_PERIOD = 21
+    MAX_SIGNAL_AGE_HOURS = 24
 
 
 def calculate_ema(prices, period):
@@ -221,6 +222,7 @@ def analyze_coin(coin):
         dict: 策略分析結果
     """
     ohlcv = coin.get("ohlcv", [])
+    symbol = coin.get("symbol", "")
     if not ohlcv or len(ohlcv) < 30:
         raise ValueError(f"K 線資料不足: {len(ohlcv)} 根")
 
@@ -516,11 +518,48 @@ def analyze_coin(coin):
             cond5_ok = (curr_osc < 0) or (curr_osc > 0 and is_shrinking)
 
     # ===== 進出場訊號判定 =====
-    long_entry = (status_rd == 3 and cond1_ok and cond2_ok and cond3_ok and cond4_ok and cond5_ok)
-    short_entry = (status_rd == -3 and cond1_ok and cond2_ok and cond3_ok and cond4_ok and cond5_ok)
+    long_entry_all_met = (status_rd == 3 and cond1_ok and cond2_ok and cond3_ok and cond4_ok and cond5_ok)
+    short_entry_all_met = (status_rd == -3 and cond1_ok and cond2_ok and cond3_ok and cond4_ok and cond5_ok)
 
+    # 計算訊號時效（年齡）
+    now_ts = ohlcv_1h[-1][0] if ohlcv_1h else (ohlcv[-1][0] if ohlcv else 0)
+    signal_age_hours = 0.0
+    if cond4_ts and now_ts:
+        signal_age_hours = max(0.0, (now_ts - cond4_ts) / 3600000.0)
+
+    # 僅在時效內（例如 24 小時內）才算「當前新進場訊號」，超過則為「波段持倉中」
+    is_fresh_entry = (signal_age_hours <= MAX_SIGNAL_AGE_HOURS)
+    long_entry = long_entry_all_met and is_fresh_entry
+    short_entry = short_entry_all_met and is_fresh_entry
+    in_position = (long_entry_all_met or short_entry_all_met) and not is_fresh_entry
+
+    # 建立進場唯一 ID (signal_key)
+    entry_signal_key = ""
+    if long_entry_all_met and cond4_ts:
+        entry_signal_key = f"{symbol}_long_entry_{cond4_ts}"
+    elif short_entry_all_met and cond4_ts:
+        entry_signal_key = f"{symbol}_short_entry_{cond4_ts}"
+
+    # 出場判定與唯一 ID
     long_exit = (status_rd == 3 and rsi_value > 70)
     short_exit = (status_rd == -3 and rsi_value < 30)
+
+    exit_signal_key = ""
+    if long_exit and rsi_series and ohlcv_1h:
+        # 回溯找到連續 >70 的第一根 K 棒時間，確保整段超買期間 signal_key 不變
+        idx = len(rsi_series) - 1
+        while idx > 0 and rsi_series[idx - 1] > 70:
+            idx -= 1
+        exit_cross_ts = ohlcv_1h[idx][0] if idx < len(ohlcv_1h) else now_ts
+        exit_signal_key = f"{symbol}_long_exit_{exit_cross_ts}"
+    elif short_exit and rsi_series and ohlcv_1h:
+        idx = len(rsi_series) - 1
+        while idx > 0 and rsi_series[idx - 1] < 30:
+            idx -= 1
+        exit_cross_ts = ohlcv_1h[idx][0] if idx < len(ohlcv_1h) else now_ts
+        exit_signal_key = f"{symbol}_short_exit_{exit_cross_ts}"
+
+    active_signal_key = entry_signal_key if (long_entry or short_entry) else (exit_signal_key if (long_exit or short_exit) else "")
 
     # ===== 5 步時序檢核清單 =====
     c1_txt = f"(1) 步驟1 天圖RD趨勢 ({'多頭向上' if status_rd==3 else '空頭向下'}, {trend_days}天) {'✅' if cond1_ok else '❌'}"
@@ -547,6 +586,9 @@ def analyze_coin(coin):
         if long_entry:
             action_advice = "滿足 5 步驟嚴格時序共振！天圖多頭順勢 + 1h RSI超賣打底 + 6h NTZ轉折確立 + 1h RSI中軸蓄勢 + 天圖OBV買盤充沛，觸發「合約做多進場訊號」，可順勢建立多單。"
             caution_note = "進場後請依策略監控 1h RSI，當 1h RSI 衝入超買區 (>70) 時為多單出場訊號；可設防守止損於步驟3 NTZ 轉折低點。"
+        elif in_position:
+            action_advice = f"已於 {cond4_time} 滿足 5 步驟嚴格時序進場，目前處於波段多單持倉狀態（已持倉約 {int(signal_age_hours)} 小時）。"
+            caution_note = "多單持倉中，請依策略持續監控 1h RSI 是否衝入 >70 獲利出場區。"
         elif long_exit:
             action_advice = "即時 1h RSI 已突破 70 進入極度超買區，短線多頭拉升力道耗盡，觸發「合約做多出場訊號」！"
             caution_note = "建議分批止盈或全部平倉獲利了結多單，鎖定波段利潤，切勿追高。"
@@ -562,6 +604,9 @@ def analyze_coin(coin):
         if short_entry:
             action_advice = "滿足 5 步驟嚴格時序共振！天圖空頭主趨勢 + 1h RSI超買反彈結束 + 6h NTZ轉折確立 + 1h RSI中軸下行 + 天圖OBV賣盤壓制，觸發「合約做空進場訊號」，可順勢建立空單。"
             caution_note = "進場後請依策略監控 1h RSI，當 1h RSI 跌入超賣區 (<30) 時為空單出場訊號；可設防守止損於步驟3 NTZ 轉折高點。"
+        elif in_position:
+            action_advice = f"已於 {cond4_time} 滿足 5 步驟嚴格時序進場，目前處於波段空單持倉狀態（已持倉約 {int(signal_age_hours)} 小時）。"
+            caution_note = "空單持倉中，請依策略持續監控 1h RSI 是否跌入 <30 獲利出場區。"
         elif short_exit:
             action_advice = "即時 1h RSI 已跌破 30 進入極度超賣區，短線空頭下殺力道耗盡，觸發「合約做空出場訊號」！"
             caution_note = "建議分批止盈或全部平倉空單，提防超跌強烈反彈。"
@@ -643,11 +688,17 @@ def analyze_coin(coin):
         "obv_is_shrinking": is_shrinking,
         "obv_long_ok": (curr_osc > 0) or (curr_osc < 0 and is_shrinking),
         "obv_short_ok": (curr_osc < 0) or (curr_osc > 0 and is_shrinking),
-        # 進出場訊號
+        # 進出場訊號與持倉狀態
         "long_entry": long_entry,
         "long_exit": long_exit,
         "short_entry": short_entry,
         "short_exit": short_exit,
+        "in_position": in_position,
+        "signal_key": active_signal_key,
+        "entry_signal_key": entry_signal_key,
+        "exit_signal_key": exit_signal_key,
+        "signal_age_hours": signal_age_hours,
+        "is_fresh_entry": is_fresh_entry,
         # 個幣卡片擴充欄位
         "checklist": checklist,
         "conditions_met_count": conditions_met_count,

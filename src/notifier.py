@@ -273,13 +273,15 @@ def _format_overview_coin_line(i, r):
 
     # 狀態標記
     if r.get("long_entry"):
-        status_tag = "🚀做多進場"
+        status_tag = "🚀新做多進場"
     elif r.get("short_entry"):
-        status_tag = "📉做空進場"
+        status_tag = "📉新做空進場"
     elif r.get("long_exit"):
         status_tag = "🛑多單出場"
     elif r.get("short_exit"):
         status_tag = "🔄空單出場"
+    elif r.get("in_position"):
+        status_tag = "持倉中(5/5已進場)"
     else:
         status_tag = f"進度:{conds_cnt}/5"
 

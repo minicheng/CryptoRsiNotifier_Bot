@@ -125,12 +125,13 @@ def test_long_entry_and_exit_signals():
 
     # 1h K 線：構造前段震盪、末段急跌使 1h RSI 跌至 < 30
     ohlcv_1h = []
+    ohlcv_1h = []
     p_1h = 100.0
-    for i in range(150):
+    for i in range(185):
         ohlcv_1h.append([base_time - (200 - i) * 3600000, p_1h, p_1h + 0.5, p_1h - 0.5, p_1h, 1000])
-    for i in range(50):
-        p_1h -= 1.0  # 急跌
-        ohlcv_1h.append([base_time - (50 - i) * 3600000, p_1h + 0.5, p_1h + 0.6, p_1h - 0.2, p_1h, 1000])
+    for i in range(15):
+        p_1h -= 1.0  # 最近 15 小時急跌，使條件 2~4 在時效內成立
+        ohlcv_1h.append([base_time - (15 - i) * 3600000, p_1h + 0.5, p_1h + 0.6, p_1h - 0.2, p_1h, 1000])
 
     # 6h K 線：含 NTZ
     ohlcv_6h = []
@@ -198,12 +199,15 @@ def test_short_entry_and_exit_signals():
         price -= 0.3
         daily_ohlcv.append([base_time - (300 - i) * 86400000, price, price + 0.1, price - 1.0, price - 0.5, 10000])
 
-    # 1h K 線：暴漲使 RSI > 70
+    # 1h K 線：前段平盤、末段暴漲使 RSI > 70 發生在最近 15 小時內
     ohlcv_1h = []
     p_1h = 50.0
-    for i in range(200):
-        p_1h += 1.0
-        ohlcv_1h.append([base_time - (200 - i) * 3600000, p_1h, p_1h + 1.0, p_1h - 0.2, p_1h + 0.8, 1000])
+    for i in range(185):
+        p_1h += 0.1 if i % 2 == 0 else -0.1
+        ohlcv_1h.append([base_time - (200 - i) * 3600000, p_1h, p_1h + 0.5, p_1h - 0.5, p_1h, 1000])
+    for i in range(15):
+        p_1h += 1.0  # 最近 15 小時急漲
+        ohlcv_1h.append([base_time - (15 - i) * 3600000, p_1h + 1.0, p_1h + 1.2, p_1h, p_1h + 0.8, 1000])
 
     # 6h K 線：含 NTZ
     ohlcv_6h = []
