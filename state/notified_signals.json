@@ -47,5 +47,19 @@
     "trigger_time": "10/02 12:00",
     "notified_at": "2026/10/02 04:31:28",
     "extra": {}
+  },
+  "ETH_long_exit_1790913600000": {
+    "symbol": "ETH",
+    "sig_type": "long_exit",
+    "trigger_time": "10/02 12:00",
+    "notified_at": "2026/10/02 04:51:17",
+    "extra": {}
+  },
+  "LTC_long_exit_1790913600000": {
+    "symbol": "LTC",
+    "sig_type": "long_exit",
+    "trigger_time": "10/02 12:00",
+    "notified_at": "2026/10/02 04:51:17",
+    "extra": {}
   }
 }
