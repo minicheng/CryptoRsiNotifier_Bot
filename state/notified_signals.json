@@ -26,5 +26,12 @@
     "trigger_time": "10/02 11:00",
     "notified_at": "2026/10/02 04:01:25",
     "extra": {}
+  },
+  "SOL_long_exit_1790913600000": {
+    "symbol": "SOL",
+    "sig_type": "long_exit",
+    "trigger_time": "10/02 12:00",
+    "notified_at": "2026/10/02 04:21:15",
+    "extra": {}
   }
 }
