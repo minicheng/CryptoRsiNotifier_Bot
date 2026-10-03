@@ -166,5 +166,19 @@
     "trigger_time": "10/04 00:00",
     "notified_at": "2026/10/03 16:41:23",
     "extra": {}
+  },
+  "DOGE_long_entry_1791046800000": {
+    "symbol": "DOGE",
+    "sig_type": "long_entry",
+    "trigger_time": "10/04 01:00",
+    "notified_at": "2026/10/03 18:01:33",
+    "extra": {}
+  },
+  "NEAR_long_entry_1791046800000": {
+    "symbol": "NEAR",
+    "sig_type": "long_entry",
+    "trigger_time": "10/04 01:00",
+    "notified_at": "2026/10/03 18:01:33",
+    "extra": {}
   }
 }
