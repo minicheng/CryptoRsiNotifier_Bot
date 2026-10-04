@@ -369,5 +369,26 @@
     "trigger_time": "10/05 06:00",
     "notified_at": "2026/10/04 22:01:27",
     "extra": {}
+  },
+  "BNB_long_exit_1791151200000": {
+    "symbol": "BNB",
+    "sig_type": "long_exit",
+    "trigger_time": "10/05 06:00",
+    "notified_at": "2026/10/04 22:11:23",
+    "extra": {}
+  },
+  "XLM_long_exit_1791151200000": {
+    "symbol": "XLM",
+    "sig_type": "long_exit",
+    "trigger_time": "10/05 06:00",
+    "notified_at": "2026/10/04 22:11:23",
+    "extra": {}
+  },
+  "CC_long_exit_1791151200000": {
+    "symbol": "CC",
+    "sig_type": "long_exit",
+    "trigger_time": "10/05 06:00",
+    "notified_at": "2026/10/04 22:11:23",
+    "extra": {}
   }
 }
