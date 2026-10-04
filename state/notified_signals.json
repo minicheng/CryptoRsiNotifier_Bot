@@ -313,5 +313,12 @@
     "trigger_time": "10/04 22:00",
     "notified_at": "2026/10/04 15:01:30",
     "extra": {}
+  },
+  "SUI_long_exit_1791126000000": {
+    "symbol": "SUI",
+    "sig_type": "long_exit",
+    "trigger_time": "10/04 23:00",
+    "notified_at": "2026/10/04 15:11:19",
+    "extra": {}
   }
 }
