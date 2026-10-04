@@ -362,5 +362,12 @@
     "trigger_time": "10/05 05:00",
     "notified_at": "2026/10/04 21:31:17",
     "extra": {}
+  },
+  "XRP_long_exit_1791151200000": {
+    "symbol": "XRP",
+    "sig_type": "long_exit",
+    "trigger_time": "10/05 06:00",
+    "notified_at": "2026/10/04 22:01:27",
+    "extra": {}
   }
 }
