@@ -306,5 +306,12 @@
     "trigger_time": "10/04 21:00",
     "notified_at": "2026/10/04 13:31:33",
     "extra": {}
+  },
+  "LTC_long_exit_1791122400000": {
+    "symbol": "LTC",
+    "sig_type": "long_exit",
+    "trigger_time": "10/04 22:00",
+    "notified_at": "2026/10/04 15:01:30",
+    "extra": {}
   }
 }
