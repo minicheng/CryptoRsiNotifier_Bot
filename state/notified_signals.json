@@ -320,5 +320,12 @@
     "trigger_time": "10/04 23:00",
     "notified_at": "2026/10/04 15:11:19",
     "extra": {}
+  },
+  "DOGE_long_exit_1791129600000": {
+    "symbol": "DOGE",
+    "sig_type": "long_exit",
+    "trigger_time": "10/05 00:00",
+    "notified_at": "2026/10/04 16:51:16",
+    "extra": {}
   }
 }
