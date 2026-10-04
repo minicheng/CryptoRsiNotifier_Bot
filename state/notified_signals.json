@@ -348,5 +348,12 @@
     "trigger_time": "10/05 02:00",
     "notified_at": "2026/10/04 19:01:27",
     "extra": {}
+  },
+  "BTC_long_exit_1791144000000": {
+    "symbol": "BTC",
+    "sig_type": "long_exit",
+    "trigger_time": "10/05 04:00",
+    "notified_at": "2026/10/04 20:41:16",
+    "extra": {}
   }
 }
