@@ -390,5 +390,19 @@
     "trigger_time": "10/05 06:00",
     "notified_at": "2026/10/04 22:11:23",
     "extra": {}
+  },
+  "ETH_long_exit_1791151200000": {
+    "symbol": "ETH",
+    "sig_type": "long_exit",
+    "trigger_time": "10/05 06:00",
+    "notified_at": "2026/10/04 22:21:19",
+    "extra": {}
+  },
+  "HYPE_long_exit_1791151200000": {
+    "symbol": "HYPE",
+    "sig_type": "long_exit",
+    "trigger_time": "10/05 06:00",
+    "notified_at": "2026/10/04 22:21:19",
+    "extra": {}
   }
 }
