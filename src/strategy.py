@@ -443,9 +443,11 @@ def analyze_coin(coin):
                 cond3_time = f"{t_start_str}~{t_end_str}"
                 break
 
-    # ===== 4. RSI 方向確認 (1h K 方向與中軸判定) =====
-    # 時序前置限制：必須在條件 3 (NTZ 轉折) 出現之後確認 (T4 >= T3)！
-    # ★ 正向搜尋：找 NTZ 收盤後「最早的」RSI<50 / RSI>50 的 1h K 棒
+    # ===== 4. RSI 方向確認 (1h K 方向與中軸判定，即時監控) =====
+    # 時序前置限制：NTZ 要等 6h K 收盤才能確認 (cond3_ts = NTZ 收盤時間)，
+    # 因此步驟 4 只能從「NTZ 收盤當下(含)之後才開盤」的 1h K 開始找，
+    # 在 NTZ 收盤前就已走完的 1h K（例如 13:00 棒，當時 NTZ 尚未確認）一律不採計！
+    # ★ 正向搜尋：找 NTZ 收盤後「最早的」RSI<50 / RSI>50 的 1h K 棒（含最新即時棒）
     cond4_ok = False
     cond4_idx = None
     cond4_ts = None
@@ -457,7 +459,7 @@ def analyze_coin(coin):
         for i in range(len(ohlcv_1h)):
             bar_ts = ohlcv_1h[i][0]
             bar_end_ts_i = bar_ts + 3600 * 1000
-            if bar_end_ts_i < cond3_ts:
+            if bar_ts < cond3_ts:
                 continue
             rsi_i = rsi_series[i] if i < len(rsi_series) else 50.0
             if status_rd == 3:
@@ -479,34 +481,52 @@ def analyze_coin(coin):
                     cond4_time = datetime.datetime.fromtimestamp(bar_ts / 1000, tz=tw_tz).strftime("%m/%d %H:%M")
                     break
 
-    # ===== 5. OBV Oscillator 動能確認 (天圖日K) =====
-    # 時序前置限制：接續步驟 4 (1h RSI<50/RSI>50) 之時間點，確認當時的天圖 OBV 動能！
-    obv_osc_series = calculate_obv_oscillator_series(ohlcv, OBV_EMA_PERIOD)  # 使用日K
-
+    # ===== 5. OBV Oscillator 動能確認 (天圖日K，Point-in-Time) =====
+    # 時序前置限制：以步驟 4 觸發的「當下時間點」判斷天圖 OBV 動能！
+    # 步驟 4 當下，該天的日 K 尚未收盤，因此用「當日 00:00 起至步驟 4 該根 1h K」
+    # 合成一根「截至當時」的日 K 棒（收盤=該 1h 收盤、量=累計量），
+    # 接在前面已收盤的日 K 後面計算 OBV Oscillator，避免使用當時尚未發生的整日資料（前視偏誤）。
+    DAY_MS = 86400 * 1000
+    ohlcv_obv = ohlcv
     cond5_idx = None
-    if cond4_ok and cond4_ts:
-        # 尋找涵蓋步驟 4 時間點的該根天圖日 K
-        for i, bar in enumerate(ohlcv):
-            bar_start = bar[0]
-            bar_end = bar_start + 86400 * 1000
-            if bar_start <= cond4_ts < bar_end:
-                cond5_idx = i
-                break
-        if cond5_idx is None:
-            cond5_idx = len(ohlcv) - 1
-    else:
+    cond5_ts = 0
+    cond5_time = ""
+    cond5_is_partial = False
+
+    if cond4_ok and cond4_ts and ohlcv:
+        day_start = ohlcv[0][0] + ((cond4_ts - ohlcv[0][0]) // DAY_MS) * DAY_MS
+        partial_1h = [b for b in ohlcv_1h if day_start <= b[0] <= cond4_ts]
+        if partial_1h:
+            partial_bar = [
+                day_start,
+                partial_1h[0][1],
+                max(b[2] for b in partial_1h),
+                min(b[3] for b in partial_1h),
+                partial_1h[-1][4],
+                sum(b[5] for b in partial_1h),
+            ]
+            prior_days = [b for b in ohlcv if b[0] < day_start]
+            ohlcv_obv = prior_days + [partial_bar]
+            cond5_idx = len(ohlcv_obv) - 1
+            cond5_ts = cond4_ts
+            cond5_is_partial = True
+            cond5_time = datetime.datetime.fromtimestamp(cond4_ts / 1000, tz=tw_tz).strftime("%m/%d %H:%M")
+
+    if cond5_idx is None:
+        # 步驟 4 尚未成立（或無 1h 資料）→ 顯示最新已收盤日 K 的 OBV 供參考
+        ohlcv_obv = ohlcv
         cond5_idx = len(ohlcv) - 1 if ohlcv else None
+        cond5_ts = ohlcv[-1][0] if ohlcv else 0
+        cond5_time = datetime.datetime.fromtimestamp(cond5_ts / 1000, tz=tw_tz).strftime("%m/%d") if cond5_ts else ""
+
+    obv_osc_series = calculate_obv_oscillator_series(ohlcv_obv, OBV_EMA_PERIOD)
 
     if cond5_idx is not None and cond5_idx < len(obv_osc_series):
         curr_osc = obv_osc_series[cond5_idx]
         prev_osc = obv_osc_series[cond5_idx - 1] if cond5_idx > 0 else 0.0
-        cond5_ts = ohlcv[cond5_idx][0]
-        cond5_time = datetime.datetime.fromtimestamp(cond5_ts / 1000, tz=tw_tz).strftime("%m/%d")
     else:
         curr_osc = obv_osc_series[-1] if obv_osc_series else 0.0
         prev_osc = obv_osc_series[-2] if len(obv_osc_series) >= 2 else 0.0
-        cond5_ts = ohlcv[-1][0] if ohlcv else 0
-        cond5_time = datetime.datetime.fromtimestamp(cond5_ts / 1000, tz=tw_tz).strftime("%m/%d") if cond5_ts else ""
 
     is_shrinking = abs(curr_osc) < abs(prev_osc)
 
@@ -720,6 +740,8 @@ def analyze_coin(coin):
         "cond5_idx": cond5_idx,
         "cond5_ts": cond5_ts,
         "cond5_time": cond5_time,
+        "ohlcv_obv": ohlcv_obv,
+        "cond5_is_partial": cond5_is_partial,
         "obv_osc_series": obv_osc_series,
         "obv_osc": curr_osc,
         "obv_osc_prev": prev_osc,

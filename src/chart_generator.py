@@ -600,7 +600,8 @@ def generate_chart_step5_obv(coin_data, output_dir="charts", n_display=75):
     產生圖 5: 步驟 5 OBV 動能確認 (天圖日K OBV_Oscillator 指標表示)
     天圖日 K 棒 + 日K OBV Oscillator 柱狀圖，標示最新值、前一根值及量縮判定
     """
-    ohlcv = coin_data.get("ohlcv", [])
+    # 使用 Point-in-Time 日K序列（最後一根為「截至步驟4當時」的合成日K），與策略判定一致
+    ohlcv = coin_data.get("ohlcv_obv") or coin_data.get("ohlcv", [])
     if not ohlcv or len(ohlcv) < 22:
         return None
 
