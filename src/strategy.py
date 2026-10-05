@@ -619,14 +619,14 @@ def analyze_coin(coin):
         c3_txt = f"(3) 步驟3 6h NTZ轉折 ({cond3_time}) {'✅' if cond3_ok else '❌'}" if cond3_time else f"(3) 步驟3 6h NTZ轉折 (無接續轉折) ❌"
         c4_val_str = f" RSI={cond4_val:.1f}" if cond4_val is not None else ""
         c4_txt = f"(4) 步驟4 1h RSI<50 蓄勢 ({cond4_time}{c4_val_str}) {'✅' if cond4_ok else '❌'}" if cond4_time else f"(4) 步驟4 1h RSI<50 蓄勢 (未確認) ❌"
-        obv_det = "OBV>0" if curr_osc > 0 else ("OBV量縮" if is_shrinking else f"OBV={curr_osc:.0f}")
+        obv_det = "OBV Osc>0" if curr_osc > 0 else ("OBV Osc量縮" if is_shrinking else f"OBV Osc={curr_osc:.0f}")
         c5_txt = f"(5) 步驟5 天圖OBV動能 ({cond5_time} {obv_det}) {'✅' if cond5_ok else '❌'}"
     else:
         c2_txt = f"(2) 步驟2 1h RSI>70 超買 ({cond2_time} RSI={cond2_val:.1f}) {'✅' if cond2_ok else '❌'}" if cond2_time else f"(2) 步驟2 1h RSI>70 超買 (未達超買) ❌"
         c3_txt = f"(3) 步驟3 6h NTZ轉折 ({cond3_time}) {'✅' if cond3_ok else '❌'}" if cond3_time else f"(3) 步驟3 6h NTZ轉折 (無接續轉折) ❌"
         c4_val_str = f" RSI={cond4_val:.1f}" if cond4_val is not None else ""
         c4_txt = f"(4) 步驟4 1h RSI>50 弱勢 ({cond4_time}{c4_val_str}) {'✅' if cond4_ok else '❌'}" if cond4_time else f"(4) 步驟4 1h RSI>50 弱勢 (未確認) ❌"
-        obv_det = "OBV<0" if curr_osc < 0 else ("OBV量縮" if is_shrinking else f"OBV={curr_osc:.0f}")
+        obv_det = "OBV Osc<0" if curr_osc < 0 else ("OBV Osc量縮" if is_shrinking else f"OBV Osc={curr_osc:.0f}")
         c5_txt = f"(5) 步驟5 天圖OBV動能 ({cond5_time} {obv_det}) {'✅' if cond5_ok else '❌'}"
 
     checklist = [c1_txt, c2_txt, c3_txt, c4_txt, c5_txt]
@@ -649,7 +649,7 @@ def analyze_coin(coin):
         else:
             action_advice = f"天圖趨勢為多頭向上，目前已依序完成 {conditions_met_count}/5 個時序條件，建議觀望等待條件全數共振。"
             if conditions_met_count == 4:
-                caution_note = "前4步皆已達成，僅待天圖OBV確認（OBV>0 或 量縮收窄），切勿提前搶跑進場。"
+                caution_note = "前4步皆已達成，僅待天圖OBV確認（OBV Osc>0 或 量縮收窄），切勿提前搶跑進場。"
             elif conditions_met_count >= 1:
                 caution_note = "多頭格局延續中，尚未完成完整共振時序，建議保持觀望耐心等待。"
             else:
@@ -670,7 +670,7 @@ def analyze_coin(coin):
         else:
             action_advice = f"天圖趨勢為空頭向下，目前已依序完成 {conditions_met_count}/5 個時序條件，建議觀望等待條件全數共振。"
             if conditions_met_count == 4:
-                caution_note = "前4步皆已達成，僅待天圖OBV確認（OBV<0 或 量縮收窄），切勿提前搶跑進場。"
+                caution_note = "前4步皆已達成，僅待天圖OBV確認（OBV Osc<0 或 量縮收窄），切勿提前搶跑進場。"
             elif conditions_met_count >= 1:
                 caution_note = "空頭格局延續中，尚未完成完整共振時序，建議保持觀望耐心等待。"
             else:

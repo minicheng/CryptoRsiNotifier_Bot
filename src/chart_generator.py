@@ -667,20 +667,20 @@ def generate_chart_step5_obv(coin_data, output_dir="charts", n_display=75):
             color=GOLD_COLOR, fontsize=8.5, fontweight="bold", ha="center"
         )
 
-    target_req = "多方條件: OBV>0 或 量縮" if status_rd == 3 else "空方條件: OBV<0 或 量縮"
+    target_req = "多方條件: OBV Osc>0 或 量縮" if status_rd == 3 else "空方條件: OBV Osc<0 或 量縮"
     shrink_text = "量縮: [是] (|當前| < |前值|)" if is_shrinking else "量縮: [否]"
     obv_val_ok = (curr_osc > 0) if status_rd == 3 else (curr_osc < 0)
     momentum_ok = obv_val_ok or is_shrinking
     if cond5_ok:
-        cond5_status = "[滿足] (" + ("OBV>0" if obv_val_ok else "量縮") + ")"
+        cond5_status = "[滿足] (" + ("OBV Osc>0" if obv_val_ok else "OBV Osc量縮") + ")"
     elif momentum_ok:
-        cond5_status = "[指標符合] (" + ("OBV>0" if obv_val_ok else "量縮") + ")"
+        cond5_status = "[指標符合] (" + ("OBV Osc>0" if obv_val_ok else "OBV Osc量縮") + ")"
     else:
         cond5_status = "[未滿足]"
 
     ax1.set_title(
         f"【步驟5: OBV動能確認 - 天圖 OBV Oscillator】 {symbol} ({name})\n"
-        f"{target_req}  |  當時OBV({cond5_time}): {curr_osc:+,.0f} (前值: {prev_osc:+,.0f})  |  {shrink_text}  |  步驟5: {cond5_status}",
+        f"{target_req}  |  當時OBV Osc({cond5_time}): {curr_osc:+,.0f} (前值: {prev_osc:+,.0f})  |  {shrink_text}  |  步驟5: {cond5_status}",
         color="#ffffff", fontsize=11, fontweight="bold", pad=8
     )
     ax1.yaxis.tick_right()
