@@ -425,5 +425,12 @@
     "trigger_time": "10/05 10:00",
     "notified_at": "2026/10/05 02:21:24",
     "extra": {}
+  },
+  "HYPE_long_exit_1791180000000": {
+    "symbol": "HYPE",
+    "sig_type": "long_exit",
+    "trigger_time": "10/05 14:00",
+    "notified_at": "2026/10/05 06:51:17",
+    "extra": {}
   }
 }
