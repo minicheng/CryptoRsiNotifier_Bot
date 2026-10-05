@@ -1,12 +1,12 @@
-# 🏦 五星RSI策略訊號監控 — 加密貨幣合約波段訊號監控系統
+# 🏦 My RSI Strategy 訊號監控 — 加密貨幣合約波段訊號監控系統
 
-透過 **CoinGecko 市值** 篩選前 20 的加密貨幣（排除穩定幣與包裝代幣），並透過 **CCXT (Bitget)** 取得 USDT-M 永續合約完整多級別 K 線歷史資料（日K、1H、6H、4H），依照**五星RSI策略（5步時序驗證）**判斷精準進出場訊號，每小時自動掃描並在出現新訊號時透過 Telegram Bot 即時推送圖文卡片與操作指引。
+透過 **CoinGecko 市值** 篩選前 20 的加密貨幣（排除穩定幣與包裝代幣），並透過 **CCXT (Bitget)** 取得 USDT-M 永續合約完整多級別 K 線歷史資料（日K、1H、6H、4H），依照 **My RSI Strategy（5步時序驗證）** 判斷精準進出場訊號，每小時自動掃描並在出現新訊號時透過 Telegram Bot 即時推送圖文卡片與操作指引。
 
 ---
 
-## 📋 策略邏輯（五星RSI策略 5 步時序）
+## 📋 策略邏輯（My RSI Strategy 5 步時序）
 
-五星RSI策略結合趨勢確認、動量反轉、濾網與成交量確認，由以下 **5 大條件** 嚴格時序驗證：
+My RSI Strategy 結合趨勢確認、動量反轉、濾網與成交量確認，由以下 **5 大條件** 嚴格時序驗證：
 
 | 步驟 / 條件 | 週期 | 多方條件 (🟢 做多) | 空方條件 (🔴 做空) | 說明 / 指標來源 |
 |------------|------|-------------------|-------------------|---------------|
@@ -92,11 +92,11 @@
 CryptoRsiNotifier_Bot/
 ├── .github/
 │   └── workflows/
-│       └── daily_notify.yml    # 五星RSI策略訊號監控 GitHub Actions 排程
+│       └── daily_notify.yml    # My RSI Strategy 訊號監控 GitHub Actions 排程
 ├── src/
 │   ├── config.py               # 策略參數與設定
 │   ├── scanner.py              # CoinGecko 市值篩選 + CCXT (Bitget) 多週期K線抓取
-│   ├── strategy.py             # 五星RSI策略邏輯（5步時序驗證、進出場判斷）
+│   ├── strategy.py             # My RSI Strategy 邏輯（5步時序驗證、進出場判斷）
 │   ├── state_manager.py        # 訊號狀態管理器（防止重複推播）
 │   ├── chart_generator.py      # Matplotlib 四子圖指標圖表繪製模組
 │   ├── notifier.py             # Telegram 圖文卡片與訊號格式化
