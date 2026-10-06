@@ -523,5 +523,12 @@
     "trigger_time": "10/06 19:00",
     "notified_at": "2026/10/06 11:21:12",
     "extra": {}
+  },
+  "ADA_long_exit_1791284400000": {
+    "symbol": "ADA",
+    "sig_type": "long_exit",
+    "trigger_time": "10/06 19:00",
+    "notified_at": "2026/10/06 11:51:11",
+    "extra": {}
   }
 }
