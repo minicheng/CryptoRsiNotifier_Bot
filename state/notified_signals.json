@@ -558,5 +558,12 @@
     "trigger_time": "10/07 10:00",
     "notified_at": "2026/10/07 02:31:14",
     "extra": {}
+  },
+  "SOL_long_entry_1791352800000": {
+    "symbol": "SOL",
+    "sig_type": "long_entry",
+    "trigger_time": "10/07 14:00",
+    "notified_at": "2026/10/07 06:01:36",
+    "extra": {}
   }
 }
