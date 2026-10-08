@@ -593,5 +593,19 @@
     "trigger_time": "10/08 12:00",
     "notified_at": "2026/10/08 04:21:08",
     "extra": {}
+  },
+  "HYPE_long_entry_1791439200000": {
+    "symbol": "HYPE",
+    "sig_type": "long_entry",
+    "trigger_time": "10/08 14:00",
+    "notified_at": "2026/10/08 06:01:34",
+    "extra": {}
+  },
+  "SUI_long_entry_1791439200000": {
+    "symbol": "SUI",
+    "sig_type": "long_entry",
+    "trigger_time": "10/08 14:00",
+    "notified_at": "2026/10/08 06:01:34",
+    "extra": {}
   }
 }
