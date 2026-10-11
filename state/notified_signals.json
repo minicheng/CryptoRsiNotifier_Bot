@@ -754,5 +754,12 @@
     "trigger_time": "10/12 02:00",
     "notified_at": "2026/10/11 18:01:44",
     "extra": {}
+  },
+  "CC_long_exit_1791741600000": {
+    "symbol": "CC",
+    "sig_type": "long_exit",
+    "trigger_time": "10/12 02:00",
+    "notified_at": "2026/10/11 18:41:12",
+    "extra": {}
   }
 }
