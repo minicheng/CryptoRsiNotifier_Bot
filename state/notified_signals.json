@@ -915,5 +915,12 @@
     "trigger_time": "10/13 02:00",
     "notified_at": "2026/10/12 18:31:24",
     "extra": {}
+  },
+  "HYPE_short_exit_1791835200000": {
+    "symbol": "HYPE",
+    "sig_type": "short_exit",
+    "trigger_time": "10/13 04:00",
+    "notified_at": "2026/10/12 21:01:35",
+    "extra": {}
   }
 }
