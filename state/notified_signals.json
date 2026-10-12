@@ -936,5 +936,54 @@
     "trigger_time": "10/13 05:00",
     "notified_at": "2026/10/12 21:41:20",
     "extra": {}
+  },
+  "XRP_short_exit_1791838800000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "10/13 05:00",
+    "notified_at": "2026/10/12 21:51:40",
+    "extra": {}
+  },
+  "SOL_short_exit_1791838800000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "10/13 05:00",
+    "notified_at": "2026/10/12 21:51:40",
+    "extra": {}
+  },
+  "TRX_short_exit_1791838800000": {
+    "symbol": "TRX",
+    "sig_type": "short_exit",
+    "trigger_time": "10/13 05:00",
+    "notified_at": "2026/10/12 21:51:40",
+    "extra": {}
+  },
+  "ZEC_short_exit_1791838800000": {
+    "symbol": "ZEC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/13 05:00",
+    "notified_at": "2026/10/12 21:51:40",
+    "extra": {}
+  },
+  "ADA_short_exit_1791838800000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "10/13 05:00",
+    "notified_at": "2026/10/12 21:51:40",
+    "extra": {}
+  },
+  "UNI_short_exit_1791838800000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/13 05:00",
+    "notified_at": "2026/10/12 21:51:40",
+    "extra": {}
+  },
+  "SUI_short_exit_1791838800000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/13 05:00",
+    "notified_at": "2026/10/12 21:51:40",
+    "extra": {}
   }
 }
