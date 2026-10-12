@@ -1013,5 +1013,26 @@
     "trigger_time": "10/13 06:00",
     "notified_at": "2026/10/12 23:01:34",
     "extra": {}
+  },
+  "BNB_short_exit_1791846000000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "10/13 07:00",
+    "notified_at": "2026/10/12 23:11:22",
+    "extra": {}
+  },
+  "TRX_short_exit_1791846000000": {
+    "symbol": "TRX",
+    "sig_type": "short_exit",
+    "trigger_time": "10/13 07:00",
+    "notified_at": "2026/10/12 23:11:22",
+    "extra": {}
+  },
+  "XLM_short_exit_1791846000000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "10/13 07:00",
+    "notified_at": "2026/10/12 23:11:22",
+    "extra": {}
   }
 }
