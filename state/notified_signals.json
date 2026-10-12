@@ -817,5 +817,12 @@
     "trigger_time": "10/12 14:00",
     "notified_at": "2026/10/12 06:01:29",
     "extra": {}
+  },
+  "XMR_short_entry_1791784800000": {
+    "symbol": "XMR",
+    "sig_type": "short_entry",
+    "trigger_time": "10/12 14:00",
+    "notified_at": "2026/10/12 06:31:27",
+    "extra": {}
   }
 }
