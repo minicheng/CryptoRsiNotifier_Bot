@@ -1048,5 +1048,12 @@
     "trigger_time": "10/13 08:00",
     "notified_at": "2026/10/13 00:11:01",
     "extra": {}
+  },
+  "BCH_short_entry_1791871200000": {
+    "symbol": "BCH",
+    "sig_type": "short_entry",
+    "trigger_time": "10/13 14:00",
+    "notified_at": "2026/10/13 06:31:21",
+    "extra": {}
   }
 }
