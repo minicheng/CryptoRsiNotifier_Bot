@@ -1076,5 +1076,12 @@
     "trigger_time": "10/13 20:00",
     "notified_at": "2026/10/13 12:51:09",
     "extra": {}
+  },
+  "BTW_long_exit_1791896400000": {
+    "symbol": "BTW",
+    "sig_type": "long_exit",
+    "trigger_time": "10/13 21:00",
+    "notified_at": "2026/10/13 13:21:19",
+    "extra": {}
   }
 }
