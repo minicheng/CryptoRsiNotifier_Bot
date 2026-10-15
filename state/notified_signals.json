@@ -1307,5 +1307,82 @@
     "trigger_time": "10/15 10:00",
     "notified_at": "2026/10/15 02:21:11",
     "extra": {}
+  },
+  "BTC_short_exit_1792029600000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 10:00",
+    "notified_at": "2026/10/15 02:31:47",
+    "extra": {}
+  },
+  "BNB_short_exit_1792029600000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 10:00",
+    "notified_at": "2026/10/15 02:31:47",
+    "extra": {}
+  },
+  "XRP_short_exit_1792029600000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 10:00",
+    "notified_at": "2026/10/15 02:31:47",
+    "extra": {}
+  },
+  "SOL_short_exit_1792029600000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 10:00",
+    "notified_at": "2026/10/15 02:31:47",
+    "extra": {}
+  },
+  "LINK_short_exit_1792029600000": {
+    "symbol": "LINK",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 10:00",
+    "notified_at": "2026/10/15 02:31:47",
+    "extra": {}
+  },
+  "ADA_short_exit_1792029600000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 10:00",
+    "notified_at": "2026/10/15 02:31:47",
+    "extra": {}
+  },
+  "BCH_short_exit_1792029600000": {
+    "symbol": "BCH",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 10:00",
+    "notified_at": "2026/10/15 02:31:47",
+    "extra": {}
+  },
+  "LTC_short_exit_1792029600000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 10:00",
+    "notified_at": "2026/10/15 02:31:47",
+    "extra": {}
+  },
+  "UNI_short_exit_1792029600000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 10:00",
+    "notified_at": "2026/10/15 02:31:47",
+    "extra": {}
+  },
+  "AVAX_short_exit_1792029600000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 10:00",
+    "notified_at": "2026/10/15 02:31:47",
+    "extra": {}
+  },
+  "SUI_short_exit_1792029600000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 10:00",
+    "notified_at": "2026/10/15 02:31:47",
+    "extra": {}
   }
 }
