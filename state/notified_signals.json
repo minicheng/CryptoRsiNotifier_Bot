@@ -1384,5 +1384,33 @@
     "trigger_time": "10/15 10:00",
     "notified_at": "2026/10/15 02:31:47",
     "extra": {}
+  },
+  "BTC_short_exit_1792033200000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 11:00",
+    "notified_at": "2026/10/15 03:01:40",
+    "extra": {}
+  },
+  "XRP_short_exit_1792033200000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 11:00",
+    "notified_at": "2026/10/15 03:01:40",
+    "extra": {}
+  },
+  "SOL_short_exit_1792033200000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 11:00",
+    "notified_at": "2026/10/15 03:01:40",
+    "extra": {}
+  },
+  "SUI_short_exit_1792033200000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 11:00",
+    "notified_at": "2026/10/15 03:01:40",
+    "extra": {}
   }
 }
