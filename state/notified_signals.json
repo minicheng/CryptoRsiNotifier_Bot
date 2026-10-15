@@ -1426,5 +1426,19 @@
     "trigger_time": "10/15 11:00",
     "notified_at": "2026/10/15 03:31:27",
     "extra": {}
+  },
+  "ETH_short_exit_1792040400000": {
+    "symbol": "ETH",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 13:00",
+    "notified_at": "2026/10/15 05:11:24",
+    "extra": {}
+  },
+  "ZEC_short_exit_1792040400000": {
+    "symbol": "ZEC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 13:00",
+    "notified_at": "2026/10/15 05:11:24",
+    "extra": {}
   }
 }
