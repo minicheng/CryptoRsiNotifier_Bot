@@ -1,18 +1,4 @@
 {
-  "TRX_short_entry_1727740800000": {
-    "symbol": "TRX",
-    "sig_type": "short_entry",
-    "trigger_time": "10/01 08:00",
-    "notified_at": "2026/10/01 12:32:44",
-    "extra": {}
-  },
-  "TRX_short_entry_1790812800000": {
-    "symbol": "TRX",
-    "sig_type": "short_entry",
-    "trigger_time": "10/01 08:00",
-    "notified_at": "2026/10/01 12:35:37",
-    "extra": {}
-  },
   "BTC_long_exit_1790910000000": {
     "symbol": "BTC",
     "sig_type": "long_exit",
