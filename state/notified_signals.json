@@ -1482,5 +1482,12 @@
     "trigger_time": "10/15 13:00",
     "notified_at": "2026/10/15 06:02:06",
     "extra": {}
+  },
+  "TRX_short_entry_1792047600000": {
+    "symbol": "TRX",
+    "sig_type": "short_entry",
+    "trigger_time": "10/15 15:00",
+    "notified_at": "2026/10/15 07:31:21",
+    "extra": {}
   }
 }
