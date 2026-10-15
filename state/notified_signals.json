@@ -1475,5 +1475,12 @@
     "trigger_time": "10/15 21:00",
     "notified_at": "2026/10/15 13:21:15",
     "extra": {}
+  },
+  "LINK_short_exit_1792069200000": {
+    "symbol": "LINK",
+    "sig_type": "short_exit",
+    "trigger_time": "10/15 21:00",
+    "notified_at": "2026/10/15 13:31:27",
+    "extra": {}
   }
 }
