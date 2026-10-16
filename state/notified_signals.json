@@ -1,11 +1,4 @@
 {
-  "BTC_long_exit_1790931600000": {
-    "symbol": "BTC",
-    "sig_type": "long_exit",
-    "trigger_time": "10/02 17:00",
-    "notified_at": "2026/10/02 09:41:20",
-    "extra": {}
-  },
   "XRP_long_exit_1790935200000": {
     "symbol": "XRP",
     "sig_type": "long_exit",
