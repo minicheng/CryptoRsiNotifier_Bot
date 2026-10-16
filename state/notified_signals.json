@@ -1,11 +1,4 @@
 {
-  "LTC_long_exit_1790917200000": {
-    "symbol": "LTC",
-    "sig_type": "long_exit",
-    "trigger_time": "10/02 13:00",
-    "notified_at": "2026/10/02 05:21:13",
-    "extra": {}
-  },
   "BTC_long_exit_1790928000000": {
     "symbol": "BTC",
     "sig_type": "long_exit",
