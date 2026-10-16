@@ -1,11 +1,4 @@
 {
-  "ETH_long_exit_1790928000000": {
-    "symbol": "ETH",
-    "sig_type": "long_exit",
-    "trigger_time": "10/02 16:00",
-    "notified_at": "2026/10/02 08:31:20",
-    "extra": {}
-  },
   "BTC_long_exit_1790931600000": {
     "symbol": "BTC",
     "sig_type": "long_exit",
