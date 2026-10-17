@@ -1405,5 +1405,12 @@
     "trigger_time": "10/17 15:00",
     "notified_at": "2026/10/17 07:31:20",
     "extra": {}
+  },
+  "ZEC_short_entry_1792220400000": {
+    "symbol": "ZEC",
+    "sig_type": "short_entry",
+    "trigger_time": "10/17 15:00",
+    "notified_at": "2026/10/17 07:41:11",
+    "extra": {}
   }
 }
