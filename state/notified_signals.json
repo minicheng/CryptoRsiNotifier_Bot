@@ -1,11 +1,4 @@
 {
-  "BCH_long_exit_1791068400000": {
-    "symbol": "BCH",
-    "sig_type": "long_exit",
-    "trigger_time": "10/04 07:00",
-    "notified_at": "2026/10/03 23:41:08",
-    "extra": {}
-  },
   "XLM_long_entry_1791072000000": {
     "symbol": "XLM",
     "sig_type": "long_entry",
