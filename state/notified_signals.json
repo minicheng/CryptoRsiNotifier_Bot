@@ -1,11 +1,4 @@
 {
-  "BNB_long_exit_1791064800000": {
-    "symbol": "BNB",
-    "sig_type": "long_exit",
-    "trigger_time": "10/04 06:00",
-    "notified_at": "2026/10/03 22:41:07",
-    "extra": {}
-  },
   "BCH_long_exit_1791068400000": {
     "symbol": "BCH",
     "sig_type": "long_exit",
