@@ -1,25 +1,4 @@
 {
-  "HYPE_long_entry_1791003600000": {
-    "symbol": "HYPE",
-    "sig_type": "long_entry",
-    "trigger_time": "10/03 13:00",
-    "notified_at": "2026/10/03 06:01:32",
-    "extra": {}
-  },
-  "BCH_long_entry_1791003600000": {
-    "symbol": "BCH",
-    "sig_type": "long_entry",
-    "trigger_time": "10/03 13:00",
-    "notified_at": "2026/10/03 06:01:32",
-    "extra": {}
-  },
-  "AVAX_long_entry_1791003600000": {
-    "symbol": "AVAX",
-    "sig_type": "long_entry",
-    "trigger_time": "10/03 13:00",
-    "notified_at": "2026/10/03 06:01:32",
-    "extra": {}
-  },
   "LINK_long_entry_1791025200000": {
     "symbol": "LINK",
     "sig_type": "long_entry",
