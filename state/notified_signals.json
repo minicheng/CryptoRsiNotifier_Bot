@@ -1,11 +1,4 @@
 {
-  "LINK_long_entry_1791025200000": {
-    "symbol": "LINK",
-    "sig_type": "long_entry",
-    "trigger_time": "10/03 19:00",
-    "notified_at": "2026/10/03 12:01:29",
-    "extra": {}
-  },
   "BNB_long_exit_1791043200000": {
     "symbol": "BNB",
     "sig_type": "long_exit",
