@@ -1,11 +1,4 @@
 {
-  "BNB_long_exit_1791043200000": {
-    "symbol": "BNB",
-    "sig_type": "long_exit",
-    "trigger_time": "10/04 00:00",
-    "notified_at": "2026/10/03 16:41:23",
-    "extra": {}
-  },
   "DOGE_long_entry_1791046800000": {
     "symbol": "DOGE",
     "sig_type": "long_entry",
@@ -1467,6 +1460,13 @@
     "sig_type": "short_exit",
     "trigger_time": "10/18 00:00",
     "notified_at": "2026/10/17 16:31:34",
+    "extra": {}
+  },
+  "UNI_short_exit_1792252800000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/18 00:00",
+    "notified_at": "2026/10/17 16:51:12",
     "extra": {}
   }
 }
