@@ -1412,5 +1412,12 @@
     "trigger_time": "10/17 03:00",
     "notified_at": "2026/10/16 19:01:48",
     "extra": {}
+  },
+  "AVAX_short_entry_1792213200000": {
+    "symbol": "AVAX",
+    "sig_type": "short_entry",
+    "trigger_time": "10/17 13:00",
+    "notified_at": "2026/10/17 05:21:11",
+    "extra": {}
   }
 }
