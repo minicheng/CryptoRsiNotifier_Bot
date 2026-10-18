@@ -1,11 +1,4 @@
 {
-  "ADA_long_exit_1791136800000": {
-    "symbol": "ADA",
-    "sig_type": "long_exit",
-    "trigger_time": "10/05 02:00",
-    "notified_at": "2026/10/04 19:01:27",
-    "extra": {}
-  },
   "BTC_long_exit_1791144000000": {
     "symbol": "BTC",
     "sig_type": "long_exit",
@@ -1404,6 +1397,13 @@
     "sig_type": "short_exit",
     "trigger_time": "10/19 02:00",
     "notified_at": "2026/10/18 18:31:20",
+    "extra": {}
+  },
+  "ZEC_short_exit_1792350000000": {
+    "symbol": "ZEC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/19 03:00",
+    "notified_at": "2026/10/18 19:01:34",
     "extra": {}
   }
 }
