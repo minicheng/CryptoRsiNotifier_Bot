@@ -1,18 +1,4 @@
 {
-  "ETH_long_exit_1791151200000": {
-    "symbol": "ETH",
-    "sig_type": "long_exit",
-    "trigger_time": "10/05 06:00",
-    "notified_at": "2026/10/04 22:21:19",
-    "extra": {}
-  },
-  "HYPE_long_exit_1791151200000": {
-    "symbol": "HYPE",
-    "sig_type": "long_exit",
-    "trigger_time": "10/05 06:00",
-    "notified_at": "2026/10/04 22:21:19",
-    "extra": {}
-  },
   "DOGE_long_exit_1791165600000": {
     "symbol": "DOGE",
     "sig_type": "long_exit",
