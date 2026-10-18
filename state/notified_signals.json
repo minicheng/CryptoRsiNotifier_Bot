@@ -1,11 +1,4 @@
 {
-  "SOL_long_exit_1791118800000": {
-    "symbol": "SOL",
-    "sig_type": "long_exit",
-    "trigger_time": "10/04 21:00",
-    "notified_at": "2026/10/04 13:31:33",
-    "extra": {}
-  },
   "LTC_long_exit_1791122400000": {
     "symbol": "LTC",
     "sig_type": "long_exit",
@@ -1369,6 +1362,13 @@
     "sig_type": "long_exit",
     "trigger_time": "10/18 08:00",
     "notified_at": "2026/10/18 00:21:17",
+    "extra": {}
+  },
+  "TRX_short_exit_1792328400000": {
+    "symbol": "TRX",
+    "sig_type": "short_exit",
+    "trigger_time": "10/18 21:00",
+    "notified_at": "2026/10/18 13:41:21",
     "extra": {}
   }
 }
