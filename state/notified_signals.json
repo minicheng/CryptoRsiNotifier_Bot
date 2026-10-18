@@ -1,11 +1,4 @@
 {
-  "CC_long_exit_1791136800000": {
-    "symbol": "CC",
-    "sig_type": "long_exit",
-    "trigger_time": "10/05 02:00",
-    "notified_at": "2026/10/04 18:31:10",
-    "extra": {}
-  },
   "ADA_long_exit_1791136800000": {
     "symbol": "ADA",
     "sig_type": "long_exit",
@@ -1404,6 +1397,13 @@
     "sig_type": "short_exit",
     "trigger_time": "10/19 01:00",
     "notified_at": "2026/10/18 17:51:11",
+    "extra": {}
+  },
+  "ZEC_short_exit_1792346400000": {
+    "symbol": "ZEC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/19 02:00",
+    "notified_at": "2026/10/18 18:31:20",
     "extra": {}
   }
 }
