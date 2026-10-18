@@ -1,11 +1,4 @@
 {
-  "HYPE_long_exit_1791100800000": {
-    "symbol": "HYPE",
-    "sig_type": "long_exit",
-    "trigger_time": "10/04 16:00",
-    "notified_at": "2026/10/04 08:21:25",
-    "extra": {}
-  },
   "BNB_long_exit_1791104400000": {
     "symbol": "BNB",
     "sig_type": "long_exit",
