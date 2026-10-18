@@ -1,11 +1,4 @@
 {
-  "XLM_long_entry_1791072000000": {
-    "symbol": "XLM",
-    "sig_type": "long_entry",
-    "trigger_time": "10/04 08:00",
-    "notified_at": "2026/10/04 00:11:04",
-    "extra": {}
-  },
   "CC_long_exit_1791072000000": {
     "symbol": "CC",
     "sig_type": "long_exit",
@@ -1453,6 +1446,13 @@
     "sig_type": "short_exit",
     "trigger_time": "10/18 05:00",
     "notified_at": "2026/10/17 21:41:13",
+    "extra": {}
+  },
+  "XMR_long_exit_1792281600000": {
+    "symbol": "XMR",
+    "sig_type": "long_exit",
+    "trigger_time": "10/18 08:00",
+    "notified_at": "2026/10/18 00:21:17",
     "extra": {}
   }
 }
