@@ -1,11 +1,4 @@
 {
-  "HYPE_long_exit_1791104400000": {
-    "symbol": "HYPE",
-    "sig_type": "long_exit",
-    "trigger_time": "10/04 17:00",
-    "notified_at": "2026/10/04 10:01:30",
-    "extra": {}
-  },
   "SOL_long_exit_1791108000000": {
     "symbol": "SOL",
     "sig_type": "long_exit",
