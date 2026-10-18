@@ -1,18 +1,4 @@
 {
-  "SOL_long_exit_1791108000000": {
-    "symbol": "SOL",
-    "sig_type": "long_exit",
-    "trigger_time": "10/04 18:00",
-    "notified_at": "2026/10/04 10:11:18",
-    "extra": {}
-  },
-  "BTC_long_exit_1791108000000": {
-    "symbol": "BTC",
-    "sig_type": "long_exit",
-    "trigger_time": "10/04 18:00",
-    "notified_at": "2026/10/04 10:21:11",
-    "extra": {}
-  },
   "HYPE_long_exit_1791111600000": {
     "symbol": "HYPE",
     "sig_type": "long_exit",
