@@ -1370,5 +1370,12 @@
     "trigger_time": "10/18 22:00",
     "notified_at": "2026/10/18 14:11:22",
     "extra": {}
+  },
+  "XRP_short_exit_1792335600000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "10/18 23:00",
+    "notified_at": "2026/10/18 15:31:26",
+    "extra": {}
   }
 }
