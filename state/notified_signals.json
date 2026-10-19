@@ -1,18 +1,4 @@
 {
-  "NEAR_long_entry_1791162000000": {
-    "symbol": "NEAR",
-    "sig_type": "long_entry",
-    "trigger_time": "10/05 09:00",
-    "notified_at": "2026/10/05 02:21:24",
-    "extra": {}
-  },
-  "ETH_long_exit_1791165600000": {
-    "symbol": "ETH",
-    "sig_type": "long_exit",
-    "trigger_time": "10/05 10:00",
-    "notified_at": "2026/10/05 02:21:24",
-    "extra": {}
-  },
   "HYPE_long_exit_1791180000000": {
     "symbol": "HYPE",
     "sig_type": "long_exit",
