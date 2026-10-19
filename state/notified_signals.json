@@ -1,11 +1,4 @@
 {
-  "NEAR_long_exit_1791234000000": {
-    "symbol": "NEAR",
-    "sig_type": "long_exit",
-    "trigger_time": "10/06 05:00",
-    "notified_at": "2026/10/05 21:39:56",
-    "extra": {}
-  },
   "HYPE_long_exit_1791237600000": {
     "symbol": "HYPE",
     "sig_type": "long_exit",
