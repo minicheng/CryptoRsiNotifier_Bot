@@ -1,11 +1,4 @@
 {
-  "AVAX_long_exit_1791262800000": {
-    "symbol": "AVAX",
-    "sig_type": "long_exit",
-    "trigger_time": "10/06 13:00",
-    "notified_at": "2026/10/06 05:21:14",
-    "extra": {}
-  },
   "AVAX_long_exit_1791266400000": {
     "symbol": "AVAX",
     "sig_type": "long_exit",
