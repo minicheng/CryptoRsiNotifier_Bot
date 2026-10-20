@@ -1,11 +1,4 @@
 {
-  "UNI_long_entry_1791309600000": {
-    "symbol": "UNI",
-    "sig_type": "long_entry",
-    "trigger_time": "10/07 02:00",
-    "notified_at": "2026/10/06 18:01:52",
-    "extra": {}
-  },
   "TRX_short_exit_1791338400000": {
     "symbol": "TRX",
     "sig_type": "short_exit",
