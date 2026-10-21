@@ -1370,5 +1370,12 @@
     "trigger_time": "10/21 20:00",
     "notified_at": "2026/10/21 12:51:08",
     "extra": {}
+  },
+  "NEAR_long_exit_1792594800000": {
+    "symbol": "NEAR",
+    "sig_type": "long_exit",
+    "trigger_time": "10/21 23:00",
+    "notified_at": "2026/10/21 15:11:08",
+    "extra": {}
   }
 }
