@@ -1398,5 +1398,19 @@
     "trigger_time": "10/22 14:00",
     "notified_at": "2026/10/22 06:51:15",
     "extra": {}
+  },
+  "UNI_short_exit_1792652400000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 15:00",
+    "notified_at": "2026/10/22 07:11:22",
+    "extra": {}
+  },
+  "SUI_short_exit_1792652400000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 15:00",
+    "notified_at": "2026/10/22 07:11:22",
+    "extra": {}
   }
 }
