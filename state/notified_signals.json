@@ -1356,5 +1356,19 @@
     "trigger_time": "10/21 23:00",
     "notified_at": "2026/10/21 15:11:08",
     "extra": {}
+  },
+  "NEAR_long_entry_1792634400000": {
+    "symbol": "NEAR",
+    "sig_type": "long_entry",
+    "trigger_time": "10/22 10:00",
+    "notified_at": "2026/10/22 02:21:10",
+    "extra": {}
+  },
+  "AVAX_short_exit_1792634400000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 10:00",
+    "notified_at": "2026/10/22 02:21:10",
+    "extra": {}
   }
 }
