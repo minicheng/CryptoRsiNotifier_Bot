@@ -1384,5 +1384,12 @@
     "trigger_time": "10/22 12:00",
     "notified_at": "2026/10/22 04:31:18",
     "extra": {}
+  },
+  "XMR_long_exit_1792645200000": {
+    "symbol": "XMR",
+    "sig_type": "long_exit",
+    "trigger_time": "10/22 13:00",
+    "notified_at": "2026/10/22 05:51:10",
+    "extra": {}
   }
 }
