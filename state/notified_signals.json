@@ -1699,5 +1699,19 @@
     "trigger_time": "10/23 00:00",
     "notified_at": "2026/10/22 16:51:48",
     "extra": {}
+  },
+  "TRX_short_exit_1792684800000": {
+    "symbol": "TRX",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 00:00",
+    "notified_at": "2026/10/22 17:01:46",
+    "extra": {}
+  },
+  "CC_short_exit_1792688400000": {
+    "symbol": "CC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 01:00",
+    "notified_at": "2026/10/22 17:01:46",
+    "extra": {}
   }
 }
