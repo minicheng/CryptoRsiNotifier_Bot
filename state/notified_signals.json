@@ -1,11 +1,4 @@
 {
-  "ZEC_short_exit_1791432000000": {
-    "symbol": "ZEC",
-    "sig_type": "short_exit",
-    "trigger_time": "10/08 12:00",
-    "notified_at": "2026/10/08 04:21:08",
-    "extra": {}
-  },
   "HYPE_long_entry_1791439200000": {
     "symbol": "HYPE",
     "sig_type": "long_entry",
@@ -1383,6 +1376,13 @@
     "sig_type": "short_exit",
     "trigger_time": "10/22 11:00",
     "notified_at": "2026/10/22 03:21:08",
+    "extra": {}
+  },
+  "DOGE_short_exit_1792641600000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 12:00",
+    "notified_at": "2026/10/22 04:31:18",
     "extra": {}
   }
 }
