@@ -1727,5 +1727,40 @@
     "trigger_time": "10/23 04:00",
     "notified_at": "2026/10/22 20:21:32",
     "extra": {}
+  },
+  "BTC_short_exit_1792699200000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 04:00",
+    "notified_at": "2026/10/22 20:51:49",
+    "extra": {}
+  },
+  "SOL_short_exit_1792699200000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 04:00",
+    "notified_at": "2026/10/22 20:51:49",
+    "extra": {}
+  },
+  "DOGE_short_exit_1792699200000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 04:00",
+    "notified_at": "2026/10/22 20:51:49",
+    "extra": {}
+  },
+  "XLM_short_exit_1792699200000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 04:00",
+    "notified_at": "2026/10/22 20:51:49",
+    "extra": {}
+  },
+  "LTC_short_exit_1792699200000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 04:00",
+    "notified_at": "2026/10/22 20:51:49",
+    "extra": {}
   }
 }
