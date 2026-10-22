@@ -1531,5 +1531,33 @@
     "trigger_time": "10/22 19:00",
     "notified_at": "2026/10/22 11:24:18",
     "extra": {}
+  },
+  "XRP_short_exit_1792674000000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 21:00",
+    "notified_at": "2026/10/22 13:11:32",
+    "extra": {}
+  },
+  "LINK_short_exit_1792674000000": {
+    "symbol": "LINK",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 21:00",
+    "notified_at": "2026/10/22 13:11:32",
+    "extra": {}
+  },
+  "ADA_short_exit_1792670400000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 20:00",
+    "notified_at": "2026/10/22 13:11:32",
+    "extra": {}
+  },
+  "XLM_short_exit_1792674000000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 21:00",
+    "notified_at": "2026/10/22 13:11:32",
+    "extra": {}
   }
 }
