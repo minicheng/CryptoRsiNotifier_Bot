@@ -1573,5 +1573,12 @@
     "trigger_time": "10/22 22:00",
     "notified_at": "2026/10/22 14:41:21",
     "extra": {}
+  },
+  "LTC_short_exit_1792677600000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 22:00",
+    "notified_at": "2026/10/22 15:01:33",
+    "extra": {}
   }
 }
