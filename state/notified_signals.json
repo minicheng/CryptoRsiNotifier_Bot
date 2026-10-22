@@ -1454,5 +1454,40 @@
     "trigger_time": "10/22 16:00",
     "notified_at": "2026/10/22 08:01:43",
     "extra": {}
+  },
+  "BTC_short_exit_1792656000000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 16:00",
+    "notified_at": "2026/10/22 08:11:35",
+    "extra": {}
+  },
+  "SOL_short_exit_1792656000000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 16:00",
+    "notified_at": "2026/10/22 08:11:35",
+    "extra": {}
+  },
+  "XLM_short_exit_1792656000000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 16:00",
+    "notified_at": "2026/10/22 08:11:35",
+    "extra": {}
+  },
+  "BCH_short_exit_1792656000000": {
+    "symbol": "BCH",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 16:00",
+    "notified_at": "2026/10/22 08:11:35",
+    "extra": {}
+  },
+  "UNI_short_exit_1792656000000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 16:00",
+    "notified_at": "2026/10/22 08:11:35",
+    "extra": {}
   }
 }
