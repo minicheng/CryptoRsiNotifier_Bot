@@ -1650,5 +1650,54 @@
     "trigger_time": "10/23 00:00",
     "notified_at": "2026/10/22 16:36:10",
     "extra": {}
+  },
+  "BNB_short_exit_1792684800000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 00:00",
+    "notified_at": "2026/10/22 16:51:48",
+    "extra": {}
+  },
+  "XRP_short_exit_1792684800000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 00:00",
+    "notified_at": "2026/10/22 16:51:48",
+    "extra": {}
+  },
+  "HYPE_short_exit_1792684800000": {
+    "symbol": "HYPE",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 00:00",
+    "notified_at": "2026/10/22 16:51:48",
+    "extra": {}
+  },
+  "DOGE_short_exit_1792684800000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 00:00",
+    "notified_at": "2026/10/22 16:51:48",
+    "extra": {}
+  },
+  "BCH_short_exit_1792684800000": {
+    "symbol": "BCH",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 00:00",
+    "notified_at": "2026/10/22 16:51:48",
+    "extra": {}
+  },
+  "UNI_short_exit_1792684800000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 00:00",
+    "notified_at": "2026/10/22 16:51:48",
+    "extra": {}
+  },
+  "CC_short_exit_1792684800000": {
+    "symbol": "CC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/23 00:00",
+    "notified_at": "2026/10/22 16:51:48",
+    "extra": {}
   }
 }
