@@ -1412,5 +1412,19 @@
     "trigger_time": "10/22 15:00",
     "notified_at": "2026/10/22 07:11:22",
     "extra": {}
+  },
+  "LTC_short_exit_1792652400000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 15:00",
+    "notified_at": "2026/10/22 07:41:12",
+    "extra": {}
+  },
+  "AVAX_short_exit_1792652400000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "10/22 15:00",
+    "notified_at": "2026/10/22 07:41:12",
+    "extra": {}
   }
 }
