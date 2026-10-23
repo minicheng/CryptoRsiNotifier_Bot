@@ -1,11 +1,4 @@
 {
-  "LTC_long_entry_1791540000000": {
-    "symbol": "LTC",
-    "sig_type": "long_entry",
-    "trigger_time": "10/09 18:00",
-    "notified_at": "2026/10/09 10:41:11",
-    "extra": {}
-  },
   "NEAR_long_exit_1791619200000": {
     "symbol": "NEAR",
     "sig_type": "long_exit",
