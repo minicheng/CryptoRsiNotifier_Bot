@@ -1776,5 +1776,47 @@
     "trigger_time": "10/23 19:00",
     "notified_at": "2026/10/23 11:41:13",
     "extra": {}
+  },
+  "BTC_short_entry_1792760400000": {
+    "symbol": "BTC",
+    "sig_type": "short_entry",
+    "trigger_time": "10/23 21:00",
+    "notified_at": "2026/10/23 14:01:57",
+    "extra": {}
+  },
+  "ETH_short_entry_1792720800000": {
+    "symbol": "ETH",
+    "sig_type": "short_entry",
+    "trigger_time": "10/23 10:00",
+    "notified_at": "2026/10/23 14:01:57",
+    "extra": {}
+  },
+  "BNB_short_entry_1792720800000": {
+    "symbol": "BNB",
+    "sig_type": "short_entry",
+    "trigger_time": "10/23 10:00",
+    "notified_at": "2026/10/23 14:01:57",
+    "extra": {}
+  },
+  "XRP_short_entry_1792731600000": {
+    "symbol": "XRP",
+    "sig_type": "short_entry",
+    "trigger_time": "10/23 13:00",
+    "notified_at": "2026/10/23 14:01:57",
+    "extra": {}
+  },
+  "DOGE_short_entry_1792720800000": {
+    "symbol": "DOGE",
+    "sig_type": "short_entry",
+    "trigger_time": "10/23 10:00",
+    "notified_at": "2026/10/23 14:01:57",
+    "extra": {}
+  },
+  "LINK_short_entry_1792720800000": {
+    "symbol": "LINK",
+    "sig_type": "short_entry",
+    "trigger_time": "10/23 10:00",
+    "notified_at": "2026/10/23 14:01:57",
+    "extra": {}
   }
 }
