@@ -1,11 +1,4 @@
 {
-  "XMR_long_entry_1791536400000": {
-    "symbol": "XMR",
-    "sig_type": "long_entry",
-    "trigger_time": "10/09 17:00",
-    "notified_at": "2026/10/09 09:31:58",
-    "extra": {}
-  },
   "LTC_long_entry_1791540000000": {
     "symbol": "LTC",
     "sig_type": "long_entry",
