@@ -1825,5 +1825,47 @@
     "trigger_time": "10/24 06:00",
     "notified_at": "2026/10/23 22:31:27",
     "extra": {}
+  },
+  "XRP_short_exit_1792792800000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 06:00",
+    "notified_at": "2026/10/23 22:51:49",
+    "extra": {}
+  },
+  "LINK_short_exit_1792792800000": {
+    "symbol": "LINK",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 06:00",
+    "notified_at": "2026/10/23 22:51:49",
+    "extra": {}
+  },
+  "ADA_short_exit_1792792800000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 06:00",
+    "notified_at": "2026/10/23 22:51:49",
+    "extra": {}
+  },
+  "LTC_short_exit_1792792800000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 06:00",
+    "notified_at": "2026/10/23 22:51:49",
+    "extra": {}
+  },
+  "UNI_short_exit_1792792800000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 06:00",
+    "notified_at": "2026/10/23 22:51:49",
+    "extra": {}
+  },
+  "SUI_short_exit_1792792800000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 06:00",
+    "notified_at": "2026/10/23 22:51:49",
+    "extra": {}
   }
 }
