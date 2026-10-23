@@ -1804,5 +1804,12 @@
     "trigger_time": "10/23 13:00",
     "notified_at": "2026/10/23 05:51:41",
     "extra": {}
+  },
+  "ZEC_long_entry_1792735200000": {
+    "symbol": "ZEC",
+    "sig_type": "long_entry",
+    "trigger_time": "10/23 14:00",
+    "notified_at": "2026/10/23 06:01:39",
+    "extra": {}
   }
 }
