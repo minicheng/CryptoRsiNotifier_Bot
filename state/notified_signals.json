@@ -1874,5 +1874,19 @@
     "trigger_time": "10/24 08:00",
     "notified_at": "2026/10/24 00:21:19",
     "extra": {}
+  },
+  "XRP_short_exit_1792800000000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 08:00",
+    "notified_at": "2026/10/24 00:41:09",
+    "extra": {}
+  },
+  "XLM_short_exit_1792800000000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 08:00",
+    "notified_at": "2026/10/24 00:41:09",
+    "extra": {}
   }
 }
