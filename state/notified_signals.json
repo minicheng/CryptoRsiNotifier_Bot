@@ -2049,5 +2049,19 @@
     "trigger_time": "10/25 00:00",
     "notified_at": "2026/10/24 16:31:26",
     "extra": {}
+  },
+  "BNB_short_exit_1792861200000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "10/25 01:00",
+    "notified_at": "2026/10/24 17:01:40",
+    "extra": {}
+  },
+  "LTC_short_exit_1792861200000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/25 01:00",
+    "notified_at": "2026/10/24 17:01:40",
+    "extra": {}
   }
 }
