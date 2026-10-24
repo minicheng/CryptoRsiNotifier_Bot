@@ -1902,5 +1902,19 @@
     "trigger_time": "10/24 17:00",
     "notified_at": "2026/10/24 09:11:17",
     "extra": {}
+  },
+  "SOL_short_exit_1792832400000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 17:00",
+    "notified_at": "2026/10/24 09:21:17",
+    "extra": {}
+  },
+  "HYPE_short_exit_1792832400000": {
+    "symbol": "HYPE",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 17:00",
+    "notified_at": "2026/10/24 09:21:17",
+    "extra": {}
   }
 }
