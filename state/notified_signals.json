@@ -1979,5 +1979,33 @@
     "trigger_time": "10/24 22:00",
     "notified_at": "2026/10/24 14:41:18",
     "extra": {}
+  },
+  "BTC_short_exit_1792854000000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 23:00",
+    "notified_at": "2026/10/24 15:11:24",
+    "extra": {}
+  },
+  "XRP_short_exit_1792854000000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 23:00",
+    "notified_at": "2026/10/24 15:11:24",
+    "extra": {}
+  },
+  "XLM_short_exit_1792854000000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 23:00",
+    "notified_at": "2026/10/24 15:11:24",
+    "extra": {}
+  },
+  "UNI_short_exit_1792854000000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 23:00",
+    "notified_at": "2026/10/24 15:11:24",
+    "extra": {}
   }
 }
