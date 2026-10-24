@@ -2007,5 +2007,40 @@
     "trigger_time": "10/24 23:00",
     "notified_at": "2026/10/24 15:11:24",
     "extra": {}
+  },
+  "XMR_long_entry_1792854000000": {
+    "symbol": "XMR",
+    "sig_type": "long_entry",
+    "trigger_time": "10/24 23:00",
+    "notified_at": "2026/10/24 15:21:34",
+    "extra": {}
+  },
+  "HYPE_short_exit_1792854000000": {
+    "symbol": "HYPE",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 23:00",
+    "notified_at": "2026/10/24 15:21:34",
+    "extra": {}
+  },
+  "BCH_short_exit_1792854000000": {
+    "symbol": "BCH",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 23:00",
+    "notified_at": "2026/10/24 15:21:34",
+    "extra": {}
+  },
+  "CC_short_exit_1792854000000": {
+    "symbol": "CC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 23:00",
+    "notified_at": "2026/10/24 15:21:34",
+    "extra": {}
+  },
+  "AVAX_short_exit_1792854000000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "10/24 23:00",
+    "notified_at": "2026/10/24 15:21:34",
+    "extra": {}
   }
 }
