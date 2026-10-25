@@ -1,46 +1,4 @@
 {
-  "BTC_short_entry_1791741600000": {
-    "symbol": "BTC",
-    "sig_type": "short_entry",
-    "trigger_time": "10/12 02:00",
-    "notified_at": "2026/10/11 18:01:44",
-    "extra": {}
-  },
-  "ETH_short_entry_1791741600000": {
-    "symbol": "ETH",
-    "sig_type": "short_entry",
-    "trigger_time": "10/12 02:00",
-    "notified_at": "2026/10/11 18:01:44",
-    "extra": {}
-  },
-  "XRP_short_entry_1791741600000": {
-    "symbol": "XRP",
-    "sig_type": "short_entry",
-    "trigger_time": "10/12 02:00",
-    "notified_at": "2026/10/11 18:01:44",
-    "extra": {}
-  },
-  "SOL_short_entry_1791741600000": {
-    "symbol": "SOL",
-    "sig_type": "short_entry",
-    "trigger_time": "10/12 02:00",
-    "notified_at": "2026/10/11 18:01:44",
-    "extra": {}
-  },
-  "ZEC_short_entry_1791741600000": {
-    "symbol": "ZEC",
-    "sig_type": "short_entry",
-    "trigger_time": "10/12 02:00",
-    "notified_at": "2026/10/11 18:01:44",
-    "extra": {}
-  },
-  "LINK_short_entry_1791741600000": {
-    "symbol": "LINK",
-    "sig_type": "short_entry",
-    "trigger_time": "10/12 02:00",
-    "notified_at": "2026/10/11 18:01:44",
-    "extra": {}
-  },
   "CC_long_exit_1791741600000": {
     "symbol": "CC",
     "sig_type": "long_exit",
