@@ -2077,5 +2077,12 @@
     "trigger_time": "10/25 06:00",
     "notified_at": "2026/10/24 22:22:00",
     "extra": {}
+  },
+  "SUI_short_exit_1792908000000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/25 14:00",
+    "notified_at": "2026/10/25 06:51:12",
+    "extra": {}
   }
 }
