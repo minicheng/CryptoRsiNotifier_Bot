@@ -1,11 +1,4 @@
 {
-  "ADA_short_entry_1791727200000": {
-    "symbol": "ADA",
-    "sig_type": "short_entry",
-    "trigger_time": "10/11 22:00",
-    "notified_at": "2026/10/11 14:51:11",
-    "extra": {}
-  },
   "AVAX_long_exit_1791730800000": {
     "symbol": "AVAX",
     "sig_type": "long_exit",
