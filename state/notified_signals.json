@@ -1,11 +1,4 @@
 {
-  "CC_long_exit_1791734400000": {
-    "symbol": "CC",
-    "sig_type": "long_exit",
-    "trigger_time": "10/12 00:00",
-    "notified_at": "2026/10/11 16:21:13",
-    "extra": {}
-  },
   "BTC_short_entry_1791741600000": {
     "symbol": "BTC",
     "sig_type": "short_entry",
