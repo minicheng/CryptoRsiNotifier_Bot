@@ -1,11 +1,4 @@
 {
-  "CC_long_exit_1791748800000": {
-    "symbol": "CC",
-    "sig_type": "long_exit",
-    "trigger_time": "10/12 04:00",
-    "notified_at": "2026/10/11 20:02:00",
-    "extra": {}
-  },
   "NEAR_long_exit_1791756000000": {
     "symbol": "NEAR",
     "sig_type": "long_exit",
