@@ -1,11 +1,4 @@
 {
-  "SUI_short_entry_1791720000000": {
-    "symbol": "SUI",
-    "sig_type": "short_entry",
-    "trigger_time": "10/11 20:00",
-    "notified_at": "2026/10/11 12:11:12",
-    "extra": {}
-  },
   "ADA_short_entry_1791727200000": {
     "symbol": "ADA",
     "sig_type": "short_entry",
