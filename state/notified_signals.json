@@ -1,11 +1,4 @@
 {
-  "AVAX_long_exit_1791781200000": {
-    "symbol": "AVAX",
-    "sig_type": "long_exit",
-    "trigger_time": "10/12 13:00",
-    "notified_at": "2026/10/12 05:11:11",
-    "extra": {}
-  },
   "XLM_short_entry_1791784800000": {
     "symbol": "XLM",
     "sig_type": "short_entry",
