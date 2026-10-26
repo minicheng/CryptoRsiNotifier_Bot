@@ -1,11 +1,4 @@
 {
-  "LTC_short_exit_1791817200000": {
-    "symbol": "LTC",
-    "sig_type": "short_exit",
-    "trigger_time": "10/12 23:00",
-    "notified_at": "2026/10/12 15:51:14",
-    "extra": {}
-  },
   "XRP_short_exit_1791820800000": {
     "symbol": "XRP",
     "sig_type": "short_exit",
