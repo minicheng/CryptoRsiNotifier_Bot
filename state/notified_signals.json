@@ -1,18 +1,4 @@
 {
-  "SOL_short_exit_1791820800000": {
-    "symbol": "SOL",
-    "sig_type": "short_exit",
-    "trigger_time": "10/13 00:00",
-    "notified_at": "2026/10/12 17:01:46",
-    "extra": {}
-  },
-  "DOGE_short_exit_1791820800000": {
-    "symbol": "DOGE",
-    "sig_type": "short_exit",
-    "trigger_time": "10/13 00:00",
-    "notified_at": "2026/10/12 17:01:46",
-    "extra": {}
-  },
   "SUI_short_exit_1791820800000": {
     "symbol": "SUI",
     "sig_type": "short_exit",
