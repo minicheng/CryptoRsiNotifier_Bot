@@ -1979,5 +1979,12 @@
     "trigger_time": "10/26 14:00",
     "notified_at": "2026/10/26 06:01:31",
     "extra": {}
+  },
+  "BNB_short_entry_1792929600000": {
+    "symbol": "BNB",
+    "sig_type": "short_entry",
+    "trigger_time": "10/25 20:00",
+    "notified_at": "2026/10/26 11:07:05",
+    "extra": {}
   }
 }
