@@ -1,11 +1,4 @@
 {
-  "BTW_long_exit_1791932400000": {
-    "symbol": "BTW",
-    "sig_type": "long_exit",
-    "trigger_time": "10/14 07:00",
-    "notified_at": "2026/10/13 23:11:13",
-    "extra": {}
-  },
   "ADA_short_exit_1791982800000": {
     "symbol": "ADA",
     "sig_type": "short_exit",
