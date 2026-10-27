@@ -1,11 +1,4 @@
 {
-  "BTC_short_exit_1791849600000": {
-    "symbol": "BTC",
-    "sig_type": "short_exit",
-    "trigger_time": "10/13 08:00",
-    "notified_at": "2026/10/13 00:11:01",
-    "extra": {}
-  },
   "BCH_short_entry_1791871200000": {
     "symbol": "BCH",
     "sig_type": "short_entry",
