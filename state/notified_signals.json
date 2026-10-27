@@ -1,11 +1,4 @@
 {
-  "BCH_short_entry_1791871200000": {
-    "symbol": "BCH",
-    "sig_type": "short_entry",
-    "trigger_time": "10/13 14:00",
-    "notified_at": "2026/10/13 06:31:21",
-    "extra": {}
-  },
   "CC_long_entry_1791878400000": {
     "symbol": "CC",
     "sig_type": "long_entry",
