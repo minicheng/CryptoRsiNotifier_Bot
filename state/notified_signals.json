@@ -1,18 +1,4 @@
 {
-  "DOGE_short_exit_1791986400000": {
-    "symbol": "DOGE",
-    "sig_type": "short_exit",
-    "trigger_time": "10/14 22:00",
-    "notified_at": "2026/10/14 14:11:21",
-    "extra": {}
-  },
-  "LINK_short_exit_1791986400000": {
-    "symbol": "LINK",
-    "sig_type": "short_exit",
-    "trigger_time": "10/14 22:00",
-    "notified_at": "2026/10/14 14:11:21",
-    "extra": {}
-  },
   "BTC_short_exit_1791986400000": {
     "symbol": "BTC",
     "sig_type": "short_exit",
