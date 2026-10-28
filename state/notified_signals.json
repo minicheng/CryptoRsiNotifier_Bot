@@ -1,11 +1,4 @@
 {
-  "XMR_short_entry_1792000800000": {
-    "symbol": "XMR",
-    "sig_type": "short_entry",
-    "trigger_time": "10/15 02:00",
-    "notified_at": "2026/10/14 19:01:41",
-    "extra": {}
-  },
   "ETH_short_exit_1792004400000": {
     "symbol": "ETH",
     "sig_type": "short_exit",
