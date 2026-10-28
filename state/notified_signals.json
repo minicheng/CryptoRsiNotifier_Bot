@@ -1762,5 +1762,19 @@
     "trigger_time": "10/28 11:00",
     "notified_at": "2026/10/28 03:40:57",
     "extra": {}
+  },
+  "XRP_short_entry_1793188800000": {
+    "symbol": "XRP",
+    "sig_type": "short_entry",
+    "trigger_time": "10/28 20:00",
+    "notified_at": "2026/10/28 12:01:46",
+    "extra": {}
+  },
+  "CC_short_entry_1793188800000": {
+    "symbol": "CC",
+    "sig_type": "short_entry",
+    "trigger_time": "10/28 20:00",
+    "notified_at": "2026/10/28 12:01:46",
+    "extra": {}
   }
 }
