@@ -1706,5 +1706,19 @@
     "trigger_time": "10/29 02:00",
     "notified_at": "2026/10/28 18:02:05",
     "extra": {}
+  },
+  "XRP_short_entry_1793210400000": {
+    "symbol": "XRP",
+    "sig_type": "short_entry",
+    "trigger_time": "10/29 02:00",
+    "notified_at": "2026/10/28 18:31:34",
+    "extra": {}
+  },
+  "LINK_short_entry_1793210400000": {
+    "symbol": "LINK",
+    "sig_type": "short_entry",
+    "trigger_time": "10/29 02:00",
+    "notified_at": "2026/10/28 18:31:34",
+    "extra": {}
   }
 }
