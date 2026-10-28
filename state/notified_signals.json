@@ -1,18 +1,4 @@
 {
-  "BNB_short_exit_1791990000000": {
-    "symbol": "BNB",
-    "sig_type": "short_exit",
-    "trigger_time": "10/14 23:00",
-    "notified_at": "2026/10/14 15:11:23",
-    "extra": {}
-  },
-  "XRP_short_exit_1791990000000": {
-    "symbol": "XRP",
-    "sig_type": "short_exit",
-    "trigger_time": "10/14 23:00",
-    "notified_at": "2026/10/14 15:11:23",
-    "extra": {}
-  },
   "ETH_short_exit_1792000800000": {
     "symbol": "ETH",
     "sig_type": "short_exit",
