@@ -1,11 +1,4 @@
 {
-  "ZEC_short_exit_1791990000000": {
-    "symbol": "ZEC",
-    "sig_type": "short_exit",
-    "trigger_time": "10/14 23:00",
-    "notified_at": "2026/10/14 15:01:39",
-    "extra": {}
-  },
   "BNB_short_exit_1791990000000": {
     "symbol": "BNB",
     "sig_type": "short_exit",
