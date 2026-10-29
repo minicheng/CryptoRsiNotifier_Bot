@@ -1,18 +1,4 @@
 {
-  "HYPE_short_exit_1792033200000": {
-    "symbol": "HYPE",
-    "sig_type": "short_exit",
-    "trigger_time": "10/15 11:00",
-    "notified_at": "2026/10/15 03:31:27",
-    "extra": {}
-  },
-  "UNI_short_exit_1792033200000": {
-    "symbol": "UNI",
-    "sig_type": "short_exit",
-    "trigger_time": "10/15 11:00",
-    "notified_at": "2026/10/15 03:31:27",
-    "extra": {}
-  },
   "ETH_short_exit_1792040400000": {
     "symbol": "ETH",
     "sig_type": "short_exit",
@@ -1558,6 +1544,27 @@
     "sig_type": "short_exit",
     "trigger_time": "10/29 11:00",
     "notified_at": "2026/10/29 03:11:11",
+    "extra": {}
+  },
+  "XRP_short_exit_1793242800000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "10/29 11:00",
+    "notified_at": "2026/10/29 03:32:00",
+    "extra": {}
+  },
+  "NEAR_short_exit_1793242800000": {
+    "symbol": "NEAR",
+    "sig_type": "short_exit",
+    "trigger_time": "10/29 11:00",
+    "notified_at": "2026/10/29 03:32:00",
+    "extra": {}
+  },
+  "BCH_short_exit_1793242800000": {
+    "symbol": "BCH",
+    "sig_type": "short_exit",
+    "trigger_time": "10/29 11:00",
+    "notified_at": "2026/10/29 03:32:00",
     "extra": {}
   }
 }
