@@ -1,11 +1,4 @@
 {
-  "ZEC_short_exit_1792029600000": {
-    "symbol": "ZEC",
-    "sig_type": "short_exit",
-    "trigger_time": "10/15 10:00",
-    "notified_at": "2026/10/15 02:21:11",
-    "extra": {}
-  },
   "BTC_short_exit_1792029600000": {
     "symbol": "BTC",
     "sig_type": "short_exit",
@@ -1649,6 +1642,13 @@
     "sig_type": "short_exit",
     "trigger_time": "10/29 09:00",
     "notified_at": "2026/10/29 02:11:08",
+    "extra": {}
+  },
+  "ETH_short_exit_1793239200000": {
+    "symbol": "ETH",
+    "sig_type": "short_exit",
+    "trigger_time": "10/29 10:00",
+    "notified_at": "2026/10/29 02:31:31",
     "extra": {}
   }
 }
