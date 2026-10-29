@@ -1510,5 +1510,19 @@
     "trigger_time": "10/30 01:00",
     "notified_at": "2026/10/29 17:22:10",
     "extra": {}
+  },
+  "BNB_short_exit_1793304000000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 04:00",
+    "notified_at": "2026/10/29 20:41:23",
+    "extra": {}
+  },
+  "XRP_short_exit_1793304000000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 04:00",
+    "notified_at": "2026/10/29 20:41:23",
+    "extra": {}
   }
 }
