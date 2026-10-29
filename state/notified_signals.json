@@ -1,11 +1,4 @@
 {
-  "TRX_short_entry_1792022400000": {
-    "symbol": "TRX",
-    "sig_type": "short_entry",
-    "trigger_time": "10/15 08:00",
-    "notified_at": "2026/10/15 00:01:47",
-    "extra": {}
-  },
   "ETH_short_exit_1792022400000": {
     "symbol": "ETH",
     "sig_type": "short_exit",
