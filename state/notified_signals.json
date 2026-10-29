@@ -1,11 +1,4 @@
 {
-  "DOGE_short_exit_1792029600000": {
-    "symbol": "DOGE",
-    "sig_type": "short_exit",
-    "trigger_time": "10/15 10:00",
-    "notified_at": "2026/10/15 02:11:12",
-    "extra": {}
-  },
   "ZEC_short_exit_1792029600000": {
     "symbol": "ZEC",
     "sig_type": "short_exit",
