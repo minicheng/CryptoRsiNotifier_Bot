@@ -1,11 +1,4 @@
 {
-  "XLM_short_exit_1792029600000": {
-    "symbol": "XLM",
-    "sig_type": "short_exit",
-    "trigger_time": "10/15 10:00",
-    "notified_at": "2026/10/15 02:01:25",
-    "extra": {}
-  },
   "DOGE_short_exit_1792029600000": {
     "symbol": "DOGE",
     "sig_type": "short_exit",
@@ -1656,6 +1649,13 @@
     "sig_type": "short_exit",
     "trigger_time": "10/29 10:00",
     "notified_at": "2026/10/29 02:01:27",
+    "extra": {}
+  },
+  "ADA_short_exit_1793235600000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "10/29 09:00",
+    "notified_at": "2026/10/29 02:11:08",
     "extra": {}
   }
 }
