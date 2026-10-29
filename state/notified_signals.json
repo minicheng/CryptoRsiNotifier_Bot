@@ -1559,5 +1559,19 @@
     "trigger_time": "10/30 04:00",
     "notified_at": "2026/10/29 20:51:39",
     "extra": {}
+  },
+  "ADA_short_exit_1793304000000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 04:00",
+    "notified_at": "2026/10/29 21:01:53",
+    "extra": {}
+  },
+  "AVAX_short_exit_1793304000000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 04:00",
+    "notified_at": "2026/10/29 21:01:53",
+    "extra": {}
   }
 }
