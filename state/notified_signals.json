@@ -1,25 +1,4 @@
 {
-  "ETH_short_exit_1792040400000": {
-    "symbol": "ETH",
-    "sig_type": "short_exit",
-    "trigger_time": "10/15 13:00",
-    "notified_at": "2026/10/15 05:11:24",
-    "extra": {}
-  },
-  "ZEC_short_exit_1792040400000": {
-    "symbol": "ZEC",
-    "sig_type": "short_exit",
-    "trigger_time": "10/15 13:00",
-    "notified_at": "2026/10/15 05:11:24",
-    "extra": {}
-  },
-  "XLM_short_exit_1792040400000": {
-    "symbol": "XLM",
-    "sig_type": "short_exit",
-    "trigger_time": "10/15 13:00",
-    "notified_at": "2026/10/15 05:21:12",
-    "extra": {}
-  },
   "DOGE_short_exit_1792040400000": {
     "symbol": "DOGE",
     "sig_type": "short_exit",
