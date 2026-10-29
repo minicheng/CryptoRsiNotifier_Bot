@@ -1524,5 +1524,40 @@
     "trigger_time": "10/30 04:00",
     "notified_at": "2026/10/29 20:41:23",
     "extra": {}
+  },
+  "XMR_long_exit_1793304000000": {
+    "symbol": "XMR",
+    "sig_type": "long_exit",
+    "trigger_time": "10/30 04:00",
+    "notified_at": "2026/10/29 20:51:39",
+    "extra": {}
+  },
+  "SOL_short_exit_1793304000000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 04:00",
+    "notified_at": "2026/10/29 20:51:39",
+    "extra": {}
+  },
+  "DOGE_short_exit_1793304000000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 04:00",
+    "notified_at": "2026/10/29 20:51:39",
+    "extra": {}
+  },
+  "XLM_short_exit_1793304000000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 04:00",
+    "notified_at": "2026/10/29 20:51:39",
+    "extra": {}
+  },
+  "UNI_short_exit_1793304000000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 04:00",
+    "notified_at": "2026/10/29 20:51:39",
+    "extra": {}
   }
 }
