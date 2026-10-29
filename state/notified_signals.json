@@ -1608,5 +1608,19 @@
     "trigger_time": "10/30 07:00",
     "notified_at": "2026/10/29 23:11:13",
     "extra": {}
+  },
+  "BTC_short_exit_1793314800000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 07:00",
+    "notified_at": "2026/10/29 23:51:29",
+    "extra": {}
+  },
+  "ADA_short_exit_1793314800000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 07:00",
+    "notified_at": "2026/10/29 23:51:29",
+    "extra": {}
   }
 }
