@@ -1601,5 +1601,12 @@
     "trigger_time": "10/30 07:00",
     "notified_at": "2026/10/29 23:02:19",
     "extra": {}
+  },
+  "AVAX_short_exit_1793314800000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 07:00",
+    "notified_at": "2026/10/29 23:11:13",
+    "extra": {}
   }
 }
