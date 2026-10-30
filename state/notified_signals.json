@@ -1671,5 +1671,19 @@
     "trigger_time": "10/30 08:00",
     "notified_at": "2026/10/30 00:40:56",
     "extra": {}
+  },
+  "LTC_short_exit_1793322000000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 09:00",
+    "notified_at": "2026/10/30 01:11:33",
+    "extra": {}
+  },
+  "UNI_short_exit_1793322000000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 09:00",
+    "notified_at": "2026/10/30 01:11:33",
+    "extra": {}
   }
 }
