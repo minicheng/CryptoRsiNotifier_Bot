@@ -1629,5 +1629,19 @@
     "trigger_time": "10/30 07:00",
     "notified_at": "2026/10/30 00:01:56",
     "extra": {}
+  },
+  "DOGE_short_exit_1793318400000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 08:00",
+    "notified_at": "2026/10/30 00:11:12",
+    "extra": {}
+  },
+  "SUI_short_exit_1793318400000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 08:00",
+    "notified_at": "2026/10/30 00:11:12",
+    "extra": {}
   }
 }
