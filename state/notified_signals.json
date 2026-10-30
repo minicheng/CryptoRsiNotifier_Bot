@@ -1643,5 +1643,26 @@
     "trigger_time": "10/30 08:00",
     "notified_at": "2026/10/30 00:11:12",
     "extra": {}
+  },
+  "ETH_short_exit_1793318400000": {
+    "symbol": "ETH",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 08:00",
+    "notified_at": "2026/10/30 00:21:16",
+    "extra": {}
+  },
+  "XLM_short_exit_1793318400000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 08:00",
+    "notified_at": "2026/10/30 00:21:16",
+    "extra": {}
+  },
+  "LTC_short_exit_1793318400000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "10/30 08:00",
+    "notified_at": "2026/10/30 00:21:16",
+    "extra": {}
   }
 }
