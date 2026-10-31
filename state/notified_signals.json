@@ -1,11 +1,4 @@
 {
-  "AVAX_short_entry_1792224000000": {
-    "symbol": "AVAX",
-    "sig_type": "short_entry",
-    "trigger_time": "10/17 16:00",
-    "notified_at": "2026/10/17 08:11:13",
-    "extra": {}
-  },
   "ZEC_short_entry_1792224000000": {
     "symbol": "ZEC",
     "sig_type": "short_entry",
