@@ -1,11 +1,4 @@
 {
-  "XLM_short_exit_1792242000000": {
-    "symbol": "XLM",
-    "sig_type": "short_exit",
-    "trigger_time": "10/17 21:00",
-    "notified_at": "2026/10/17 13:41:03",
-    "extra": {}
-  },
   "TRX_short_entry_1792195200000": {
     "symbol": "TRX",
     "sig_type": "short_entry",
