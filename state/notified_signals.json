@@ -1,11 +1,4 @@
 {
-  "TRX_short_entry_1792195200000": {
-    "symbol": "TRX",
-    "sig_type": "short_entry",
-    "trigger_time": "10/17 08:00",
-    "notified_at": "2026/10/17 16:01:27",
-    "extra": {}
-  },
   "BNB_short_exit_1792252800000": {
     "symbol": "BNB",
     "sig_type": "short_exit",
