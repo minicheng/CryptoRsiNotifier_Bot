@@ -1,25 +1,4 @@
 {
-  "UNI_short_exit_1792252800000": {
-    "symbol": "UNI",
-    "sig_type": "short_exit",
-    "trigger_time": "10/18 00:00",
-    "notified_at": "2026/10/17 16:51:12",
-    "extra": {}
-  },
-  "ADA_short_exit_1792252800000": {
-    "symbol": "ADA",
-    "sig_type": "short_exit",
-    "trigger_time": "10/18 00:00",
-    "notified_at": "2026/10/17 17:01:34",
-    "extra": {}
-  },
-  "AVAX_short_exit_1792252800000": {
-    "symbol": "AVAX",
-    "sig_type": "short_exit",
-    "trigger_time": "10/18 00:00",
-    "notified_at": "2026/10/17 17:01:34",
-    "extra": {}
-  },
   "ZEC_short_exit_1792256400000": {
     "symbol": "ZEC",
     "sig_type": "short_exit",
