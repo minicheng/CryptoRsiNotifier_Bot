@@ -1,11 +1,4 @@
 {
-  "ADA_short_exit_1792242000000": {
-    "symbol": "ADA",
-    "sig_type": "short_exit",
-    "trigger_time": "10/17 21:00",
-    "notified_at": "2026/10/17 13:11:15",
-    "extra": {}
-  },
   "XLM_short_exit_1792242000000": {
     "symbol": "XLM",
     "sig_type": "short_exit",
