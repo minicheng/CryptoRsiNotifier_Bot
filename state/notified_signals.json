@@ -1552,5 +1552,12 @@
     "trigger_time": "10/31 22:00",
     "notified_at": "2026/10/31 14:41:12",
     "extra": {}
+  },
+  "LINK_short_entry_1793512800000": {
+    "symbol": "LINK",
+    "sig_type": "short_entry",
+    "trigger_time": "11/01 14:00",
+    "notified_at": "2026/11/01 06:31:25",
+    "extra": {}
   }
 }
