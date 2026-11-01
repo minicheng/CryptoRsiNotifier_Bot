@@ -1,11 +1,4 @@
 {
-  "XMR_long_exit_1792281600000": {
-    "symbol": "XMR",
-    "sig_type": "long_exit",
-    "trigger_time": "10/18 08:00",
-    "notified_at": "2026/10/18 00:21:17",
-    "extra": {}
-  },
   "TRX_short_exit_1792328400000": {
     "symbol": "TRX",
     "sig_type": "short_exit",
