@@ -1468,5 +1468,12 @@
     "trigger_time": "11/03 01:00",
     "notified_at": "2026/11/02 17:41:28",
     "extra": {}
+  },
+  "ADA_short_exit_1793638800000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 01:00",
+    "notified_at": "2026/11/02 17:51:17",
+    "extra": {}
   }
 }
