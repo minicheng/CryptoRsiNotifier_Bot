@@ -1517,5 +1517,19 @@
     "trigger_time": "11/03 04:00",
     "notified_at": "2026/11/02 20:11:20",
     "extra": {}
+  },
+  "BNB_short_exit_1793649600000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 04:00",
+    "notified_at": "2026/11/02 20:42:00",
+    "extra": {}
+  },
+  "LINK_short_exit_1793649600000": {
+    "symbol": "LINK",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 04:00",
+    "notified_at": "2026/11/02 20:42:00",
+    "extra": {}
   }
 }
