@@ -1419,5 +1419,40 @@
     "trigger_time": "11/02 20:00",
     "notified_at": "2026/11/02 12:41:28",
     "extra": {}
+  },
+  "BTC_short_exit_1793638800000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 01:00",
+    "notified_at": "2026/11/02 17:31:58",
+    "extra": {}
+  },
+  "DOGE_short_exit_1793638800000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 01:00",
+    "notified_at": "2026/11/02 17:31:58",
+    "extra": {}
+  },
+  "LTC_short_exit_1793638800000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 01:00",
+    "notified_at": "2026/11/02 17:31:58",
+    "extra": {}
+  },
+  "AVAX_short_exit_1793638800000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 01:00",
+    "notified_at": "2026/11/02 17:31:58",
+    "extra": {}
+  },
+  "SUI_short_exit_1793638800000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 01:00",
+    "notified_at": "2026/11/02 17:31:58",
+    "extra": {}
   }
 }
