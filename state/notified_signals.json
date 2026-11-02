@@ -1454,5 +1454,19 @@
     "trigger_time": "11/03 01:00",
     "notified_at": "2026/11/02 17:31:58",
     "extra": {}
+  },
+  "SOL_short_exit_1793638800000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 01:00",
+    "notified_at": "2026/11/02 17:41:28",
+    "extra": {}
+  },
+  "LINK_short_exit_1793638800000": {
+    "symbol": "LINK",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 01:00",
+    "notified_at": "2026/11/02 17:41:28",
+    "extra": {}
   }
 }
