@@ -1545,5 +1545,26 @@
     "trigger_time": "11/03 07:00",
     "notified_at": "2026/11/02 23:02:39",
     "extra": {}
+  },
+  "UNI_short_exit_1793671200000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 10:00",
+    "notified_at": "2026/11/03 03:01:36",
+    "extra": {}
+  },
+  "AVAX_short_exit_1793671200000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 10:00",
+    "notified_at": "2026/11/03 03:01:36",
+    "extra": {}
+  },
+  "SUI_short_exit_1793671200000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/03 10:00",
+    "notified_at": "2026/11/03 03:01:36",
+    "extra": {}
   }
 }
