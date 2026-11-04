@@ -1650,5 +1650,19 @@
     "trigger_time": "11/04 10:00",
     "notified_at": "2026/11/04 03:01:57",
     "extra": {}
+  },
+  "ZEC_long_exit_1793779200000": {
+    "symbol": "ZEC",
+    "sig_type": "long_exit",
+    "trigger_time": "11/04 16:00",
+    "notified_at": "2026/11/04 08:12:11",
+    "extra": {}
+  },
+  "XRP_short_entry_1793772000000": {
+    "symbol": "XRP",
+    "sig_type": "short_entry",
+    "trigger_time": "11/04 14:00",
+    "notified_at": "2026/11/04 08:12:11",
+    "extra": {}
   }
 }
