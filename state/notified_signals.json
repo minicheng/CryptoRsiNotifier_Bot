@@ -1664,5 +1664,40 @@
     "trigger_time": "11/04 22:00",
     "notified_at": "2026/11/04 14:52:12",
     "extra": {}
+  },
+  "BNB_short_entry_1793815200000": {
+    "symbol": "BNB",
+    "sig_type": "short_entry",
+    "trigger_time": "11/05 02:00",
+    "notified_at": "2026/11/04 18:05:51",
+    "extra": {}
+  },
+  "SOL_short_entry_1793815200000": {
+    "symbol": "SOL",
+    "sig_type": "short_entry",
+    "trigger_time": "11/05 02:00",
+    "notified_at": "2026/11/04 18:05:51",
+    "extra": {}
+  },
+  "DOGE_short_entry_1793815200000": {
+    "symbol": "DOGE",
+    "sig_type": "short_entry",
+    "trigger_time": "11/05 02:00",
+    "notified_at": "2026/11/04 18:05:51",
+    "extra": {}
+  },
+  "LINK_short_entry_1793815200000": {
+    "symbol": "LINK",
+    "sig_type": "short_entry",
+    "trigger_time": "11/05 02:00",
+    "notified_at": "2026/11/04 18:05:51",
+    "extra": {}
+  },
+  "ADA_short_entry_1793815200000": {
+    "symbol": "ADA",
+    "sig_type": "short_entry",
+    "trigger_time": "11/05 02:00",
+    "notified_at": "2026/11/04 18:05:51",
+    "extra": {}
   }
 }
