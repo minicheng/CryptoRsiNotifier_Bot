@@ -1,25 +1,4 @@
 {
-  "BTC_short_exit_1792652400000": {
-    "symbol": "BTC",
-    "sig_type": "short_exit",
-    "trigger_time": "10/22 15:00",
-    "notified_at": "2026/10/22 07:51:25",
-    "extra": {}
-  },
-  "SOL_short_exit_1792652400000": {
-    "symbol": "SOL",
-    "sig_type": "short_exit",
-    "trigger_time": "10/22 15:00",
-    "notified_at": "2026/10/22 07:51:25",
-    "extra": {}
-  },
-  "BCH_short_exit_1792652400000": {
-    "symbol": "BCH",
-    "sig_type": "short_exit",
-    "trigger_time": "10/22 15:00",
-    "notified_at": "2026/10/22 07:51:25",
-    "extra": {}
-  },
   "XMR_long_exit_1792656000000": {
     "symbol": "XMR",
     "sig_type": "long_exit",
