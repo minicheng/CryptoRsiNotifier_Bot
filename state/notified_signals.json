@@ -1,11 +1,4 @@
 {
-  "LTC_short_exit_1792677600000": {
-    "symbol": "LTC",
-    "sig_type": "short_exit",
-    "trigger_time": "10/22 22:00",
-    "notified_at": "2026/10/22 15:01:33",
-    "extra": {}
-  },
   "BTC_short_exit_1792681200000": {
     "symbol": "BTC",
     "sig_type": "short_exit",
@@ -1474,6 +1467,118 @@
     "sig_type": "short_entry",
     "trigger_time": "11/05 14:00",
     "notified_at": "2026/11/05 06:01:38",
+    "extra": {}
+  },
+  "BTC_short_exit_1793890800000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "ETH_short_exit_1793890800000": {
+    "symbol": "ETH",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "BNB_short_exit_1793890800000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "XRP_short_exit_1793890800000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "SOL_short_exit_1793890800000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "TRX_short_exit_1793890800000": {
+    "symbol": "TRX",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "DOGE_short_exit_1793890800000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "LINK_short_exit_1793890800000": {
+    "symbol": "LINK",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "ADA_short_exit_1793890800000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "XLM_short_exit_1793890800000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "NEAR_short_exit_1793890800000": {
+    "symbol": "NEAR",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "UNI_short_exit_1793890800000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "LTC_short_exit_1793890800000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "CC_short_exit_1793890800000": {
+    "symbol": "CC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "AVAX_short_exit_1793890800000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
+    "extra": {}
+  },
+  "SUI_short_exit_1793890800000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/05 23:00",
+    "notified_at": "2026/11/05 15:13:30",
     "extra": {}
   }
 }
