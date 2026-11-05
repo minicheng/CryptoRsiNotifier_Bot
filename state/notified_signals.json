@@ -1,11 +1,4 @@
 {
-  "XMR_long_exit_1792656000000": {
-    "symbol": "XMR",
-    "sig_type": "long_exit",
-    "trigger_time": "10/22 16:00",
-    "notified_at": "2026/10/22 08:01:43",
-    "extra": {}
-  },
   "BTC_short_exit_1792656000000": {
     "symbol": "BTC",
     "sig_type": "short_exit",
