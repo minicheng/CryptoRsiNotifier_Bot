@@ -1447,5 +1447,33 @@
     "trigger_time": "11/06 05:00",
     "notified_at": "2026/11/05 21:01:55",
     "extra": {}
+  },
+  "BNB_short_exit_1793912400000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "11/06 05:00",
+    "notified_at": "2026/11/05 21:21:35",
+    "extra": {}
+  },
+  "DOGE_short_exit_1793912400000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/06 05:00",
+    "notified_at": "2026/11/05 21:21:35",
+    "extra": {}
+  },
+  "LTC_short_exit_1793912400000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/06 05:00",
+    "notified_at": "2026/11/05 21:21:35",
+    "extra": {}
+  },
+  "SUI_short_exit_1793912400000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/06 05:00",
+    "notified_at": "2026/11/05 21:21:35",
+    "extra": {}
   }
 }
