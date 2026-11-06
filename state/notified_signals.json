@@ -1468,5 +1468,19 @@
     "trigger_time": "11/06 20:00",
     "notified_at": "2026/11/06 12:51:17",
     "extra": {}
+  },
+  "ZEC_long_exit_1793973600000": {
+    "symbol": "ZEC",
+    "sig_type": "long_exit",
+    "trigger_time": "11/06 22:00",
+    "notified_at": "2026/11/06 14:41:25",
+    "extra": {}
+  },
+  "LTC_short_entry_1793973600000": {
+    "symbol": "LTC",
+    "sig_type": "short_entry",
+    "trigger_time": "11/06 22:00",
+    "notified_at": "2026/11/06 14:41:25",
+    "extra": {}
   }
 }
