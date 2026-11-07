@@ -1,11 +1,4 @@
 {
-  "ADA_short_exit_1792861200000": {
-    "symbol": "ADA",
-    "sig_type": "short_exit",
-    "trigger_time": "10/25 01:00",
-    "notified_at": "2026/10/24 17:11:11",
-    "extra": {}
-  },
   "BNB_short_entry_1792875600000": {
     "symbol": "BNB",
     "sig_type": "short_entry",
