@@ -1,11 +1,4 @@
 {
-  "XLM_short_exit_1792828800000": {
-    "symbol": "XLM",
-    "sig_type": "short_exit",
-    "trigger_time": "10/24 16:00",
-    "notified_at": "2026/10/24 08:11:07",
-    "extra": {}
-  },
   "LTC_short_exit_1792828800000": {
     "symbol": "LTC",
     "sig_type": "short_exit",
@@ -1453,6 +1446,13 @@
     "sig_type": "short_entry",
     "trigger_time": "11/07 13:00",
     "notified_at": "2026/11/07 05:21:14",
+    "extra": {}
+  },
+  "BTC_short_entry_1794038400000": {
+    "symbol": "BTC",
+    "sig_type": "short_entry",
+    "trigger_time": "11/07 16:00",
+    "notified_at": "2026/11/07 08:21:11",
     "extra": {}
   }
 }
