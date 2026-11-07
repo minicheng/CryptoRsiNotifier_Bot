@@ -1,11 +1,4 @@
 {
-  "DOGE_short_exit_1792836000000": {
-    "symbol": "DOGE",
-    "sig_type": "short_exit",
-    "trigger_time": "10/24 18:00",
-    "notified_at": "2026/10/24 10:21:16",
-    "extra": {}
-  },
   "LTC_short_exit_1792850400000": {
     "symbol": "LTC",
     "sig_type": "short_exit",
