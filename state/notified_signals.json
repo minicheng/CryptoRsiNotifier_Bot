@@ -1265,5 +1265,12 @@
     "trigger_time": "11/08 12:00",
     "notified_at": "2026/11/08 04:41:04",
     "extra": {}
+  },
+  "BCH_short_exit_1794142800000": {
+    "symbol": "BCH",
+    "sig_type": "short_exit",
+    "trigger_time": "11/08 21:00",
+    "notified_at": "2026/11/08 14:01:27",
+    "extra": {}
   }
 }
