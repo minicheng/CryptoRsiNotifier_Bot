@@ -1377,5 +1377,12 @@
     "trigger_time": "11/09 05:00",
     "notified_at": "2026/11/08 22:02:22",
     "extra": {}
+  },
+  "CC_short_exit_1794171600000": {
+    "symbol": "CC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/09 05:00",
+    "notified_at": "2026/11/08 22:31:23",
+    "extra": {}
   }
 }
