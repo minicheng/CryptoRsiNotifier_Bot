@@ -1,11 +1,4 @@
 {
-  "ZEC_long_entry_1792908000000": {
-    "symbol": "ZEC",
-    "sig_type": "long_entry",
-    "trigger_time": "10/25 14:00",
-    "notified_at": "2026/10/25 17:01:30",
-    "extra": {}
-  },
   "BTC_short_exit_1792980000000": {
     "symbol": "BTC",
     "sig_type": "short_exit",
