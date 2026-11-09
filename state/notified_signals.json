@@ -1405,5 +1405,12 @@
     "trigger_time": "11/09 12:00",
     "notified_at": "2026/11/09 04:11:09",
     "extra": {}
+  },
+  "BNB_short_exit_1794207600000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "11/09 15:00",
+    "notified_at": "2026/11/09 07:11:14",
+    "extra": {}
   }
 }
