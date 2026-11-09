@@ -1,11 +1,4 @@
 {
-  "HYPE_short_entry_1793037600000": {
-    "symbol": "HYPE",
-    "sig_type": "short_entry",
-    "trigger_time": "10/27 02:00",
-    "notified_at": "2026/10/26 18:01:34",
-    "extra": {}
-  },
   "TRX_short_exit_1793077200000": {
     "symbol": "TRX",
     "sig_type": "short_exit",
