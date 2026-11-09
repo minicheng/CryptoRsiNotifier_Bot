@@ -1412,5 +1412,26 @@
     "trigger_time": "11/09 15:00",
     "notified_at": "2026/11/09 07:11:14",
     "extra": {}
+  },
+  "BTC_short_exit_1794207600000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/09 15:00",
+    "notified_at": "2026/11/09 07:31:25",
+    "extra": {}
+  },
+  "SOL_short_exit_1794207600000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "11/09 15:00",
+    "notified_at": "2026/11/09 07:31:25",
+    "extra": {}
+  },
+  "DOGE_short_exit_1794207600000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/09 15:00",
+    "notified_at": "2026/11/09 07:31:25",
+    "extra": {}
   }
 }
