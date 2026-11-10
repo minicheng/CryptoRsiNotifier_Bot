@@ -1454,5 +1454,33 @@
     "trigger_time": "11/10 23:00",
     "notified_at": "2026/11/10 15:31:34",
     "extra": {}
+  },
+  "ETH_short_exit_1794322800000": {
+    "symbol": "ETH",
+    "sig_type": "short_exit",
+    "trigger_time": "11/10 23:00",
+    "notified_at": "2026/11/10 15:41:55",
+    "extra": {}
+  },
+  "DOGE_short_exit_1794322800000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/10 23:00",
+    "notified_at": "2026/11/10 15:41:55",
+    "extra": {}
+  },
+  "BCH_short_exit_1794322800000": {
+    "symbol": "BCH",
+    "sig_type": "short_exit",
+    "trigger_time": "11/10 23:00",
+    "notified_at": "2026/11/10 15:41:55",
+    "extra": {}
+  },
+  "SUI_short_exit_1794322800000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/10 23:00",
+    "notified_at": "2026/11/10 15:41:55",
+    "extra": {}
   }
 }
