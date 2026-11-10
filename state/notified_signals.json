@@ -1482,5 +1482,19 @@
     "trigger_time": "11/10 23:00",
     "notified_at": "2026/11/10 15:41:55",
     "extra": {}
+  },
+  "BNB_short_exit_1794326400000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "11/11 00:00",
+    "notified_at": "2026/11/10 16:31:36",
+    "extra": {}
+  },
+  "HYPE_short_exit_1794322800000": {
+    "symbol": "HYPE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/10 23:00",
+    "notified_at": "2026/11/10 16:31:36",
+    "extra": {}
   }
 }
