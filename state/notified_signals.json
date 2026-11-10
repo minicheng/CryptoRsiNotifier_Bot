@@ -1433,5 +1433,26 @@
     "trigger_time": "11/10 18:00",
     "notified_at": "2026/11/10 10:43:56",
     "extra": {}
+  },
+  "ETH_short_exit_1794315600000": {
+    "symbol": "ETH",
+    "sig_type": "short_exit",
+    "trigger_time": "11/10 21:00",
+    "notified_at": "2026/11/10 13:31:55",
+    "extra": {}
+  },
+  "XRP_short_exit_1794315600000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "11/10 21:00",
+    "notified_at": "2026/11/10 13:31:55",
+    "extra": {}
+  },
+  "SOL_short_exit_1794315600000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "11/10 21:00",
+    "notified_at": "2026/11/10 13:31:55",
+    "extra": {}
   }
 }
