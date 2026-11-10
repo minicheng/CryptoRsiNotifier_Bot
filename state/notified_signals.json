@@ -1503,5 +1503,26 @@
     "trigger_time": "11/11 00:00",
     "notified_at": "2026/11/10 16:41:23",
     "extra": {}
+  },
+  "ADA_short_exit_1794330000000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "11/11 01:00",
+    "notified_at": "2026/11/10 17:11:29",
+    "extra": {}
+  },
+  "XLM_short_exit_1794330000000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "11/11 01:00",
+    "notified_at": "2026/11/10 17:11:29",
+    "extra": {}
+  },
+  "LTC_short_exit_1794330000000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/11 01:00",
+    "notified_at": "2026/11/10 17:11:29",
+    "extra": {}
   }
 }
