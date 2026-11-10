@@ -1,11 +1,4 @@
 {
-  "ZEC_long_exit_1793134800000": {
-    "symbol": "ZEC",
-    "sig_type": "long_exit",
-    "trigger_time": "10/28 05:00",
-    "notified_at": "2026/10/27 21:41:14",
-    "extra": {}
-  },
   "ZEC_long_exit_1793156400000": {
     "symbol": "ZEC",
     "sig_type": "long_exit",
