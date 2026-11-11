@@ -1,11 +1,4 @@
 {
-  "XRP_short_entry_1793206800000": {
-    "symbol": "XRP",
-    "sig_type": "short_entry",
-    "trigger_time": "10/29 01:00",
-    "notified_at": "2026/10/28 17:51:27",
-    "extra": {}
-  },
   "BTC_short_entry_1793210400000": {
     "symbol": "BTC",
     "sig_type": "short_entry",
