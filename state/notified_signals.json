@@ -1,11 +1,4 @@
 {
-  "AVAX_short_exit_1793239200000": {
-    "symbol": "AVAX",
-    "sig_type": "short_exit",
-    "trigger_time": "10/29 10:00",
-    "notified_at": "2026/10/29 02:01:27",
-    "extra": {}
-  },
   "ADA_short_exit_1793235600000": {
     "symbol": "ADA",
     "sig_type": "short_exit",
