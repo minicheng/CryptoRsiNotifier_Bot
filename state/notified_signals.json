@@ -1,11 +1,4 @@
 {
-  "XMR_long_exit_1793289600000": {
-    "symbol": "XMR",
-    "sig_type": "long_exit",
-    "trigger_time": "10/30 00:00",
-    "notified_at": "2026/10/29 16:51:16",
-    "extra": {}
-  },
   "ZEC_long_exit_1793293200000": {
     "symbol": "ZEC",
     "sig_type": "long_exit",
