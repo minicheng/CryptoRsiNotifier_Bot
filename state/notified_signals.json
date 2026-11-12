@@ -1608,5 +1608,12 @@
     "trigger_time": "11/13 01:00",
     "notified_at": "2026/11/12 17:41:21",
     "extra": {}
+  },
+  "ZEC_short_exit_1794506400000": {
+    "symbol": "ZEC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/13 02:00",
+    "notified_at": "2026/11/12 18:21:18",
+    "extra": {}
   }
 }
