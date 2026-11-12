@@ -1,11 +1,4 @@
 {
-  "TRX_short_entry_1793239200000": {
-    "symbol": "TRX",
-    "sig_type": "short_entry",
-    "trigger_time": "10/29 10:00",
-    "notified_at": "2026/10/29 09:01:37",
-    "extra": {}
-  },
   "ZEC_long_exit_1793286000000": {
     "symbol": "ZEC",
     "sig_type": "long_exit",
