@@ -1496,5 +1496,47 @@
     "trigger_time": "11/12 20:00",
     "notified_at": "2026/11/12 13:01:45",
     "extra": {}
+  },
+  "BTC_short_exit_1794488400000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/12 21:00",
+    "notified_at": "2026/11/12 13:11:39",
+    "extra": {}
+  },
+  "SOL_short_exit_1794488400000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "11/12 21:00",
+    "notified_at": "2026/11/12 13:11:39",
+    "extra": {}
+  },
+  "DOGE_short_exit_1794488400000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/12 21:00",
+    "notified_at": "2026/11/12 13:11:39",
+    "extra": {}
+  },
+  "LINK_short_exit_1794488400000": {
+    "symbol": "LINK",
+    "sig_type": "short_exit",
+    "trigger_time": "11/12 21:00",
+    "notified_at": "2026/11/12 13:11:39",
+    "extra": {}
+  },
+  "ADA_short_exit_1794488400000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "11/12 21:00",
+    "notified_at": "2026/11/12 13:11:39",
+    "extra": {}
+  },
+  "SUI_short_exit_1794488400000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/12 21:00",
+    "notified_at": "2026/11/12 13:11:39",
+    "extra": {}
   }
 }
