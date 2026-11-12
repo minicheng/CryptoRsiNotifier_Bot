@@ -1440,5 +1440,12 @@
     "trigger_time": "11/12 14:00",
     "notified_at": "2026/11/12 06:51:09",
     "extra": {}
+  },
+  "XMR_short_exit_1794477600000": {
+    "symbol": "XMR",
+    "sig_type": "short_exit",
+    "trigger_time": "11/12 18:00",
+    "notified_at": "2026/11/12 10:11:12",
+    "extra": {}
   }
 }
