@@ -1475,5 +1475,26 @@
     "trigger_time": "11/12 20:00",
     "notified_at": "2026/11/12 12:31:19",
     "extra": {}
+  },
+  "ETH_short_exit_1794488400000": {
+    "symbol": "ETH",
+    "sig_type": "short_exit",
+    "trigger_time": "11/12 21:00",
+    "notified_at": "2026/11/12 13:01:45",
+    "extra": {}
+  },
+  "XMR_short_exit_1794488400000": {
+    "symbol": "XMR",
+    "sig_type": "short_exit",
+    "trigger_time": "11/12 21:00",
+    "notified_at": "2026/11/12 13:01:45",
+    "extra": {}
+  },
+  "NEAR_short_exit_1794484800000": {
+    "symbol": "NEAR",
+    "sig_type": "short_exit",
+    "trigger_time": "11/12 20:00",
+    "notified_at": "2026/11/12 13:01:45",
+    "extra": {}
   }
 }
