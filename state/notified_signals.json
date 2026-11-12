@@ -1,11 +1,4 @@
 {
-  "ZEC_long_exit_1793286000000": {
-    "symbol": "ZEC",
-    "sig_type": "long_exit",
-    "trigger_time": "10/29 23:00",
-    "notified_at": "2026/10/29 15:41:22",
-    "extra": {}
-  },
   "XMR_long_exit_1793289600000": {
     "symbol": "XMR",
     "sig_type": "long_exit",
@@ -1607,6 +1600,13 @@
     "sig_type": "short_exit",
     "trigger_time": "11/12 23:00",
     "notified_at": "2026/11/12 15:21:21",
+    "extra": {}
+  },
+  "TRX_short_exit_1794495600000": {
+    "symbol": "TRX",
+    "sig_type": "short_exit",
+    "trigger_time": "11/12 23:00",
+    "notified_at": "2026/11/12 15:51:17",
     "extra": {}
   }
 }
