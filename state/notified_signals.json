@@ -1,11 +1,4 @@
 {
-  "LINK_short_exit_1793311200000": {
-    "symbol": "LINK",
-    "sig_type": "short_exit",
-    "trigger_time": "10/30 06:00",
-    "notified_at": "2026/10/29 22:11:23",
-    "extra": {}
-  },
   "XRP_short_exit_1793314800000": {
     "symbol": "XRP",
     "sig_type": "short_exit",
