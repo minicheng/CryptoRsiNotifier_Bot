@@ -1,11 +1,4 @@
 {
-  "CC_short_exit_1793318400000": {
-    "symbol": "CC",
-    "sig_type": "short_exit",
-    "trigger_time": "10/30 08:00",
-    "notified_at": "2026/10/30 00:40:56",
-    "extra": {}
-  },
   "LTC_short_exit_1793322000000": {
     "symbol": "LTC",
     "sig_type": "short_exit",
