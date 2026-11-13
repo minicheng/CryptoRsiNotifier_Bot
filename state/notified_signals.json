@@ -1566,5 +1566,19 @@
     "trigger_time": "11/13 23:00",
     "notified_at": "2026/11/13 15:41:35",
     "extra": {}
+  },
+  "BTC_short_exit_1794610800000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 07:00",
+    "notified_at": "2026/11/13 23:11:14",
+    "extra": {}
+  },
+  "SOL_short_exit_1794610800000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 07:00",
+    "notified_at": "2026/11/13 23:11:14",
+    "extra": {}
   }
 }
