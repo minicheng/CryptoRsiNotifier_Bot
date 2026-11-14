@@ -1601,5 +1601,40 @@
     "trigger_time": "11/14 10:00",
     "notified_at": "2026/11/14 02:21:04",
     "extra": {}
+  },
+  "ETH_short_exit_1794621600000": {
+    "symbol": "ETH",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 10:00",
+    "notified_at": "2026/11/14 02:31:37",
+    "extra": {}
+  },
+  "BNB_short_exit_1794621600000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 10:00",
+    "notified_at": "2026/11/14 02:31:37",
+    "extra": {}
+  },
+  "XRP_short_exit_1794621600000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 10:00",
+    "notified_at": "2026/11/14 02:31:37",
+    "extra": {}
+  },
+  "DOGE_short_exit_1794621600000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 10:00",
+    "notified_at": "2026/11/14 02:31:37",
+    "extra": {}
+  },
+  "ADA_short_exit_1794621600000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 10:00",
+    "notified_at": "2026/11/14 02:31:37",
+    "extra": {}
   }
 }
