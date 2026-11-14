@@ -1895,5 +1895,33 @@
     "trigger_time": "11/14 23:00",
     "notified_at": "2026/11/14 15:31:43",
     "extra": {}
+  },
+  "XRP_short_exit_1794672000000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "11/15 00:00",
+    "notified_at": "2026/11/14 16:11:26",
+    "extra": {}
+  },
+  "ZEC_short_exit_1794672000000": {
+    "symbol": "ZEC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/15 00:00",
+    "notified_at": "2026/11/14 16:11:26",
+    "extra": {}
+  },
+  "XLM_short_exit_1794672000000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "11/15 00:00",
+    "notified_at": "2026/11/14 16:11:26",
+    "extra": {}
+  },
+  "BCH_short_exit_1794672000000": {
+    "symbol": "BCH",
+    "sig_type": "short_exit",
+    "trigger_time": "11/15 00:00",
+    "notified_at": "2026/11/14 16:11:26",
+    "extra": {}
   }
 }
