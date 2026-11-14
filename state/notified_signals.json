@@ -1748,5 +1748,19 @@
     "trigger_time": "11/14 15:00",
     "notified_at": "2026/11/14 07:21:43",
     "extra": {}
+  },
+  "BTC_short_exit_1794643200000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 16:00",
+    "notified_at": "2026/11/14 08:41:13",
+    "extra": {}
+  },
+  "BNB_short_exit_1794643200000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 16:00",
+    "notified_at": "2026/11/14 08:41:13",
+    "extra": {}
   }
 }
