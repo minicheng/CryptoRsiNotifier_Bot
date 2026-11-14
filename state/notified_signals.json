@@ -1783,5 +1783,26 @@
     "trigger_time": "11/14 21:00",
     "notified_at": "2026/11/14 13:31:28",
     "extra": {}
+  },
+  "BTC_short_exit_1794664800000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 22:00",
+    "notified_at": "2026/11/14 14:02:00",
+    "extra": {}
+  },
+  "ADA_short_exit_1794661200000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 21:00",
+    "notified_at": "2026/11/14 14:02:00",
+    "extra": {}
+  },
+  "CC_short_exit_1794664800000": {
+    "symbol": "CC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/14 22:00",
+    "notified_at": "2026/11/14 14:02:00",
+    "extra": {}
   }
 }
