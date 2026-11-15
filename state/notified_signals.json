@@ -1,11 +1,4 @@
 {
-  "LINK_short_entry_1793512800000": {
-    "symbol": "LINK",
-    "sig_type": "short_entry",
-    "trigger_time": "11/01 14:00",
-    "notified_at": "2026/11/01 06:31:25",
-    "extra": {}
-  },
   "SOL_short_exit_1793559600000": {
     "symbol": "SOL",
     "sig_type": "short_exit",
