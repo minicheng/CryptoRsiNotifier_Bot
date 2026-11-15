@@ -1979,5 +1979,12 @@
     "trigger_time": "11/15 04:00",
     "notified_at": "2026/11/14 20:21:23",
     "extra": {}
+  },
+  "LINK_short_exit_1794700800000": {
+    "symbol": "LINK",
+    "sig_type": "short_exit",
+    "trigger_time": "11/15 08:00",
+    "notified_at": "2026/11/15 00:31:34",
+    "extra": {}
   }
 }
