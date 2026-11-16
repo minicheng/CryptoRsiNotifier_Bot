@@ -1,18 +1,4 @@
 {
-  "ZEC_long_entry_1793642400000": {
-    "symbol": "ZEC",
-    "sig_type": "long_entry",
-    "trigger_time": "11/03 02:00",
-    "notified_at": "2026/11/02 18:01:46",
-    "extra": {}
-  },
-  "ADA_short_exit_1793642400000": {
-    "symbol": "ADA",
-    "sig_type": "short_exit",
-    "trigger_time": "11/03 02:00",
-    "notified_at": "2026/11/02 18:01:46",
-    "extra": {}
-  },
   "XLM_short_exit_1793646000000": {
     "symbol": "XLM",
     "sig_type": "short_exit",
