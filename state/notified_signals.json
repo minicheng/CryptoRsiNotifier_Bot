@@ -1,11 +1,4 @@
 {
-  "NEAR_short_exit_1793620800000": {
-    "symbol": "NEAR",
-    "sig_type": "short_exit",
-    "trigger_time": "11/02 20:00",
-    "notified_at": "2026/11/02 12:41:28",
-    "extra": {}
-  },
   "BTC_short_exit_1793638800000": {
     "symbol": "BTC",
     "sig_type": "short_exit",
