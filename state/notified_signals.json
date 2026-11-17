@@ -1,11 +1,4 @@
 {
-  "SUI_short_exit_1793685600000": {
-    "symbol": "SUI",
-    "sig_type": "short_exit",
-    "trigger_time": "11/03 14:00",
-    "notified_at": "2026/11/03 06:51:17",
-    "extra": {}
-  },
   "XMR_long_exit_1793689200000": {
     "symbol": "XMR",
     "sig_type": "long_exit",
