@@ -1,11 +1,4 @@
 {
-  "HYPE_long_entry_1793707200000": {
-    "symbol": "HYPE",
-    "sig_type": "long_entry",
-    "trigger_time": "11/03 20:00",
-    "notified_at": "2026/11/03 12:01:34",
-    "extra": {}
-  },
   "HYPE_long_entry_1793710800000": {
     "symbol": "HYPE",
     "sig_type": "long_entry",
