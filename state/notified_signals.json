@@ -1,11 +1,4 @@
 {
-  "NEAR_short_exit_1793916000000": {
-    "symbol": "NEAR",
-    "sig_type": "short_exit",
-    "trigger_time": "11/06 06:00",
-    "notified_at": "2026/11/05 22:51:18",
-    "extra": {}
-  },
   "LINK_short_exit_1793919600000": {
     "symbol": "LINK",
     "sig_type": "short_exit",
