@@ -1,11 +1,4 @@
 {
-  "AVAX_short_exit_1793898000000": {
-    "symbol": "AVAX",
-    "sig_type": "short_exit",
-    "trigger_time": "11/06 01:00",
-    "notified_at": "2026/11/05 17:02:23",
-    "extra": {}
-  },
   "XMR_long_entry_1793901600000": {
     "symbol": "XMR",
     "sig_type": "long_entry",
@@ -1572,6 +1565,13 @@
     "sig_type": "short_exit",
     "trigger_time": "11/20 01:00",
     "notified_at": "2026/11/19 17:01:46",
+    "extra": {}
+  },
+  "XMR_short_exit_1795107600000": {
+    "symbol": "XMR",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 01:00",
+    "notified_at": "2026/11/19 17:11:22",
     "extra": {}
   }
 }
