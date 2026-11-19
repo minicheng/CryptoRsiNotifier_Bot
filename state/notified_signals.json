@@ -1566,5 +1566,19 @@
     "trigger_time": "11/20 03:00",
     "notified_at": "2026/11/19 19:31:24",
     "extra": {}
+  },
+  "XLM_short_exit_1795118400000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 04:00",
+    "notified_at": "2026/11/19 20:31:39",
+    "extra": {}
+  },
+  "LTC_short_exit_1795118400000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 04:00",
+    "notified_at": "2026/11/19 20:31:39",
+    "extra": {}
   }
 }
