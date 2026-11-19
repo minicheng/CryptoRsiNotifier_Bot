@@ -1,18 +1,4 @@
 {
-  "XRP_short_exit_1793908800000": {
-    "symbol": "XRP",
-    "sig_type": "short_exit",
-    "trigger_time": "11/06 04:00",
-    "notified_at": "2026/11/05 20:02:31",
-    "extra": {}
-  },
-  "SOL_short_exit_1793908800000": {
-    "symbol": "SOL",
-    "sig_type": "short_exit",
-    "trigger_time": "11/06 04:00",
-    "notified_at": "2026/11/05 20:02:31",
-    "extra": {}
-  },
   "SOL_short_exit_1793912400000": {
     "symbol": "SOL",
     "sig_type": "short_exit",
