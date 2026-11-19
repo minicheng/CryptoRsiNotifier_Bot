@@ -1,11 +1,4 @@
 {
-  "NEAR_short_entry_1793836800000": {
-    "symbol": "NEAR",
-    "sig_type": "short_entry",
-    "trigger_time": "11/05 08:00",
-    "notified_at": "2026/11/05 00:01:45",
-    "extra": {}
-  },
   "AVAX_short_entry_1793858400000": {
     "symbol": "AVAX",
     "sig_type": "short_entry",
