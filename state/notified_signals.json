@@ -1566,5 +1566,12 @@
     "trigger_time": "11/20 05:00",
     "notified_at": "2026/11/19 21:11:27",
     "extra": {}
+  },
+  "BTC_short_exit_1795122000000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 05:00",
+    "notified_at": "2026/11/19 21:21:18",
+    "extra": {}
   }
 }
