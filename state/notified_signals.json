@@ -1,18 +1,4 @@
 {
-  "LINK_short_exit_1793919600000": {
-    "symbol": "LINK",
-    "sig_type": "short_exit",
-    "trigger_time": "11/06 07:00",
-    "notified_at": "2026/11/05 23:22:37",
-    "extra": {}
-  },
-  "ADA_short_exit_1793919600000": {
-    "symbol": "ADA",
-    "sig_type": "short_exit",
-    "trigger_time": "11/06 07:00",
-    "notified_at": "2026/11/05 23:22:37",
-    "extra": {}
-  },
   "ETH_short_exit_1793926800000": {
     "symbol": "ETH",
     "sig_type": "short_exit",
