@@ -1,11 +1,4 @@
 {
-  "XRP_short_exit_1793962800000": {
-    "symbol": "XRP",
-    "sig_type": "short_exit",
-    "trigger_time": "11/06 19:00",
-    "notified_at": "2026/11/06 11:11:38",
-    "extra": {}
-  },
   "LTC_short_entry_1793962800000": {
     "symbol": "LTC",
     "sig_type": "short_entry",
@@ -1586,6 +1579,13 @@
     "sig_type": "short_exit",
     "trigger_time": "11/20 17:00",
     "notified_at": "2026/11/20 09:41:16",
+    "extra": {}
+  },
+  "TRX_short_exit_1795172400000": {
+    "symbol": "TRX",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 19:00",
+    "notified_at": "2026/11/20 11:32:05",
     "extra": {}
   }
 }
