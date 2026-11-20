@@ -1657,5 +1657,68 @@
     "trigger_time": "11/20 23:00",
     "notified_at": "2026/11/20 15:12:13",
     "extra": {}
+  },
+  "ETH_short_exit_1795186800000": {
+    "symbol": "ETH",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:22:26",
+    "extra": {}
+  },
+  "BNB_short_exit_1795186800000": {
+    "symbol": "BNB",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:22:26",
+    "extra": {}
+  },
+  "XRP_short_exit_1795186800000": {
+    "symbol": "XRP",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:22:26",
+    "extra": {}
+  },
+  "SOL_short_exit_1795186800000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:22:26",
+    "extra": {}
+  },
+  "LINK_short_exit_1795186800000": {
+    "symbol": "LINK",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:22:26",
+    "extra": {}
+  },
+  "XLM_short_exit_1795186800000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:22:26",
+    "extra": {}
+  },
+  "LTC_short_exit_1795186800000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:22:26",
+    "extra": {}
+  },
+  "CC_short_exit_1795186800000": {
+    "symbol": "CC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:22:26",
+    "extra": {}
+  },
+  "AVAX_short_exit_1795186800000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:22:26",
+    "extra": {}
   }
 }
