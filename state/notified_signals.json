@@ -1,11 +1,4 @@
 {
-  "CC_short_entry_1793944800000": {
-    "symbol": "CC",
-    "sig_type": "short_entry",
-    "trigger_time": "11/06 14:00",
-    "notified_at": "2026/11/06 06:01:34",
-    "extra": {}
-  },
   "XRP_short_exit_1793962800000": {
     "symbol": "XRP",
     "sig_type": "short_exit",
