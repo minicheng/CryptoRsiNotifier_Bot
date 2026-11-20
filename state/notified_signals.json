@@ -1615,5 +1615,47 @@
     "trigger_time": "11/20 22:00",
     "notified_at": "2026/11/20 14:41:42",
     "extra": {}
+  },
+  "HYPE_short_exit_1795186800000": {
+    "symbol": "HYPE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:12:13",
+    "extra": {}
+  },
+  "DOGE_short_exit_1795186800000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:12:13",
+    "extra": {}
+  },
+  "ADA_short_exit_1795186800000": {
+    "symbol": "ADA",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:12:13",
+    "extra": {}
+  },
+  "NEAR_short_exit_1795186800000": {
+    "symbol": "NEAR",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:12:13",
+    "extra": {}
+  },
+  "UNI_short_exit_1795186800000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:12:13",
+    "extra": {}
+  },
+  "SUI_short_exit_1795186800000": {
+    "symbol": "SUI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:12:13",
+    "extra": {}
   }
 }
