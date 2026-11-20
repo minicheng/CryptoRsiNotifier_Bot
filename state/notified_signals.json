@@ -1727,5 +1727,12 @@
     "trigger_time": "11/20 23:00",
     "notified_at": "2026/11/20 15:42:21",
     "extra": {}
+  },
+  "XLM_short_exit_1795194000000": {
+    "symbol": "XLM",
+    "sig_type": "short_exit",
+    "trigger_time": "11/21 01:00",
+    "notified_at": "2026/11/20 17:02:25",
+    "extra": {}
   }
 }
