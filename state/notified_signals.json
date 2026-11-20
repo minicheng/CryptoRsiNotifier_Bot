@@ -1524,5 +1524,33 @@
     "trigger_time": "11/20 06:00",
     "notified_at": "2026/11/19 22:41:17",
     "extra": {}
+  },
+  "ZEC_short_exit_1795136400000": {
+    "symbol": "ZEC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 09:00",
+    "notified_at": "2026/11/20 02:01:41",
+    "extra": {}
+  },
+  "NEAR_short_exit_1795136400000": {
+    "symbol": "NEAR",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 09:00",
+    "notified_at": "2026/11/20 02:01:41",
+    "extra": {}
+  },
+  "LTC_short_exit_1795136400000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 09:00",
+    "notified_at": "2026/11/20 02:01:41",
+    "extra": {}
+  },
+  "UNI_short_exit_1795136400000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 09:00",
+    "notified_at": "2026/11/20 02:01:41",
+    "extra": {}
   }
 }
