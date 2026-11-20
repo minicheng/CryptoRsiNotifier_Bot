@@ -1,11 +1,4 @@
 {
-  "ETH_short_exit_1793977200000": {
-    "symbol": "ETH",
-    "sig_type": "short_exit",
-    "trigger_time": "11/06 23:00",
-    "notified_at": "2026/11/06 15:31:29",
-    "extra": {}
-  },
   "XRP_short_exit_1793995200000": {
     "symbol": "XRP",
     "sig_type": "short_exit",
@@ -1719,6 +1712,20 @@
     "sig_type": "short_exit",
     "trigger_time": "11/20 23:00",
     "notified_at": "2026/11/20 15:22:26",
+    "extra": {}
+  },
+  "BTC_short_exit_1795186800000": {
+    "symbol": "BTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:42:21",
+    "extra": {}
+  },
+  "BCH_short_exit_1795186800000": {
+    "symbol": "BCH",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 23:00",
+    "notified_at": "2026/11/20 15:42:21",
     "extra": {}
   }
 }
