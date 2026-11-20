@@ -1769,5 +1769,19 @@
     "trigger_time": "11/21 03:00",
     "notified_at": "2026/11/20 19:11:56",
     "extra": {}
+  },
+  "SOL_short_exit_1795201200000": {
+    "symbol": "SOL",
+    "sig_type": "short_exit",
+    "trigger_time": "11/21 03:00",
+    "notified_at": "2026/11/20 19:21:27",
+    "extra": {}
+  },
+  "BCH_short_exit_1795201200000": {
+    "symbol": "BCH",
+    "sig_type": "short_exit",
+    "trigger_time": "11/21 03:00",
+    "notified_at": "2026/11/20 19:21:27",
+    "extra": {}
   }
 }
