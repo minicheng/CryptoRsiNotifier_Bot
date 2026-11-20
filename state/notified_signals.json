@@ -1748,5 +1748,26 @@
     "trigger_time": "11/21 02:00",
     "notified_at": "2026/11/20 18:51:27",
     "extra": {}
+  },
+  "XMR_short_exit_1795201200000": {
+    "symbol": "XMR",
+    "sig_type": "short_exit",
+    "trigger_time": "11/21 03:00",
+    "notified_at": "2026/11/20 19:11:56",
+    "extra": {}
+  },
+  "LTC_short_exit_1795201200000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/21 03:00",
+    "notified_at": "2026/11/20 19:11:56",
+    "extra": {}
+  },
+  "AVAX_short_exit_1795201200000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "11/21 03:00",
+    "notified_at": "2026/11/20 19:11:56",
+    "extra": {}
   }
 }
