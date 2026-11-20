@@ -1566,5 +1566,19 @@
     "trigger_time": "11/20 12:00",
     "notified_at": "2026/11/20 04:41:09",
     "extra": {}
+  },
+  "XMR_short_exit_1795147200000": {
+    "symbol": "XMR",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 12:00",
+    "notified_at": "2026/11/20 04:51:19",
+    "extra": {}
+  },
+  "LTC_short_exit_1795147200000": {
+    "symbol": "LTC",
+    "sig_type": "short_exit",
+    "trigger_time": "11/20 12:00",
+    "notified_at": "2026/11/20 04:51:19",
+    "extra": {}
   }
 }
