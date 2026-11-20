@@ -1,11 +1,4 @@
 {
-  "XRP_short_exit_1793995200000": {
-    "symbol": "XRP",
-    "sig_type": "short_exit",
-    "trigger_time": "11/07 04:00",
-    "notified_at": "2026/11/06 20:21:28",
-    "extra": {}
-  },
   "ETH_short_entry_1794016800000": {
     "symbol": "ETH",
     "sig_type": "short_entry",
