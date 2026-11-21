@@ -1804,5 +1804,12 @@
     "trigger_time": "11/21 10:00",
     "notified_at": "2026/11/21 02:11:33",
     "extra": {}
+  },
+  "NEAR_short_exit_1795226400000": {
+    "symbol": "NEAR",
+    "sig_type": "short_exit",
+    "trigger_time": "11/21 10:00",
+    "notified_at": "2026/11/21 02:31:19",
+    "extra": {}
   }
 }
