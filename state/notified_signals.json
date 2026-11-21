@@ -1,11 +1,4 @@
 {
-  "ETH_short_entry_1794020400000": {
-    "symbol": "ETH",
-    "sig_type": "short_entry",
-    "trigger_time": "11/07 11:00",
-    "notified_at": "2026/11/07 03:10:59",
-    "extra": {}
-  },
   "ETH_short_entry_1794027600000": {
     "symbol": "ETH",
     "sig_type": "short_entry",
@@ -1817,6 +1810,20 @@
     "sig_type": "short_exit",
     "trigger_time": "11/21 11:00",
     "notified_at": "2026/11/21 03:01:33",
+    "extra": {}
+  },
+  "AVAX_short_exit_1795230000000": {
+    "symbol": "AVAX",
+    "sig_type": "short_exit",
+    "trigger_time": "11/21 11:00",
+    "notified_at": "2026/11/21 03:11:25",
+    "extra": {}
+  },
+  "UNI_short_exit_1795230000000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/21 11:00",
+    "notified_at": "2026/11/21 03:11:25",
     "extra": {}
   }
 }
