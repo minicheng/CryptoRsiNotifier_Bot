@@ -1,11 +1,4 @@
 {
-  "ETH_short_entry_1794016800000": {
-    "symbol": "ETH",
-    "sig_type": "short_entry",
-    "trigger_time": "11/07 10:00",
-    "notified_at": "2026/11/07 02:11:04",
-    "extra": {}
-  },
   "XRP_short_exit_1794016800000": {
     "symbol": "XRP",
     "sig_type": "short_exit",
@@ -1803,6 +1796,13 @@
     "sig_type": "short_exit",
     "trigger_time": "11/21 09:00",
     "notified_at": "2026/11/21 01:31:09",
+    "extra": {}
+  },
+  "GRAM_short_exit_1795226400000": {
+    "symbol": "GRAM",
+    "sig_type": "short_exit",
+    "trigger_time": "11/21 10:00",
+    "notified_at": "2026/11/21 02:11:33",
     "extra": {}
   }
 }
