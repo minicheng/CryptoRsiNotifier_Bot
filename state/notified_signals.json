@@ -1706,5 +1706,12 @@
     "trigger_time": "11/24 03:00",
     "notified_at": "2026/11/23 19:02:08",
     "extra": {}
+  },
+  "BTC_short_entry_1795474800000": {
+    "symbol": "BTC",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 07:00",
+    "notified_at": "2026/11/23 23:21:13",
+    "extra": {}
   }
 }
