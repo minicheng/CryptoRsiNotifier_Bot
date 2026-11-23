@@ -1615,5 +1615,89 @@
     "trigger_time": "11/21 11:00",
     "notified_at": "2026/11/21 03:51:13",
     "extra": {}
+  },
+  "BTC_short_entry_1795456800000": {
+    "symbol": "BTC",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
+  },
+  "ETH_short_entry_1795456800000": {
+    "symbol": "ETH",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
+  },
+  "BNB_short_entry_1795456800000": {
+    "symbol": "BNB",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
+  },
+  "ZEC_short_entry_1795456800000": {
+    "symbol": "ZEC",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
+  },
+  "DOGE_short_entry_1795456800000": {
+    "symbol": "DOGE",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
+  },
+  "LINK_short_entry_1795456800000": {
+    "symbol": "LINK",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
+  },
+  "ADA_short_entry_1795456800000": {
+    "symbol": "ADA",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
+  },
+  "XLM_short_entry_1795456800000": {
+    "symbol": "XLM",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
+  },
+  "BCH_short_entry_1795456800000": {
+    "symbol": "BCH",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
+  },
+  "NEAR_short_entry_1795456800000": {
+    "symbol": "NEAR",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
+  },
+  "AVAX_short_entry_1795456800000": {
+    "symbol": "AVAX",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
+  },
+  "UNI_short_entry_1795456800000": {
+    "symbol": "UNI",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 02:00",
+    "notified_at": "2026/11/23 18:02:30",
+    "extra": {}
   }
 }
