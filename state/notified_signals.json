@@ -1748,5 +1748,12 @@
     "trigger_time": "11/24 09:00",
     "notified_at": "2026/11/24 01:09:49",
     "extra": {}
+  },
+  "SOL_short_entry_1795482000000": {
+    "symbol": "SOL",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 09:00",
+    "notified_at": "2026/11/24 01:10:59",
+    "extra": {}
   }
 }
