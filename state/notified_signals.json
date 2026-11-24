@@ -1727,5 +1727,26 @@
     "trigger_time": "11/24 08:00",
     "notified_at": "2026/11/24 00:40:59",
     "extra": {}
+  },
+  "BTC_short_entry_1795482000000": {
+    "symbol": "BTC",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 09:00",
+    "notified_at": "2026/11/24 01:09:49",
+    "extra": {}
+  },
+  "XRP_short_entry_1795482000000": {
+    "symbol": "XRP",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 09:00",
+    "notified_at": "2026/11/24 01:09:49",
+    "extra": {}
+  },
+  "HYPE_short_entry_1795482000000": {
+    "symbol": "HYPE",
+    "sig_type": "short_entry",
+    "trigger_time": "11/24 09:00",
+    "notified_at": "2026/11/24 01:09:49",
+    "extra": {}
   }
 }
