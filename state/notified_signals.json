@@ -1,11 +1,4 @@
 {
-  "SUI_short_exit_1794326400000": {
-    "symbol": "SUI",
-    "sig_type": "short_exit",
-    "trigger_time": "11/11 00:00",
-    "notified_at": "2026/11/10 16:41:23",
-    "extra": {}
-  },
   "ADA_short_exit_1794330000000": {
     "symbol": "ADA",
     "sig_type": "short_exit",
