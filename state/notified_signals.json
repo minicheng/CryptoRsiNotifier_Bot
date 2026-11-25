@@ -1720,5 +1720,12 @@
     "trigger_time": "11/25 13:00",
     "notified_at": "2026/11/25 05:31:16",
     "extra": {}
+  },
+  "GRAM_short_exit_1795586400000": {
+    "symbol": "GRAM",
+    "sig_type": "short_exit",
+    "trigger_time": "11/25 14:00",
+    "notified_at": "2026/11/25 06:01:37",
+    "extra": {}
   }
 }
