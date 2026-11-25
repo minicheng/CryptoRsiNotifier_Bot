@@ -1713,5 +1713,19 @@
     "trigger_time": "11/25 14:00",
     "notified_at": "2026/11/25 06:01:37",
     "extra": {}
+  },
+  "HYPE_short_exit_1795590000000": {
+    "symbol": "HYPE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/25 15:00",
+    "notified_at": "2026/11/25 07:41:22",
+    "extra": {}
+  },
+  "UNI_short_exit_1795590000000": {
+    "symbol": "UNI",
+    "sig_type": "short_exit",
+    "trigger_time": "11/25 15:00",
+    "notified_at": "2026/11/25 07:41:22",
+    "extra": {}
   }
 }
