@@ -1748,5 +1748,12 @@
     "trigger_time": "11/25 17:00",
     "notified_at": "2026/11/25 09:01:39",
     "extra": {}
+  },
+  "DOGE_short_exit_1795611600000": {
+    "symbol": "DOGE",
+    "sig_type": "short_exit",
+    "trigger_time": "11/25 21:00",
+    "notified_at": "2026/11/25 13:21:23",
+    "extra": {}
   }
 }
