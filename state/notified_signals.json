@@ -1874,5 +1874,26 @@
     "trigger_time": "11/26 01:00",
     "notified_at": "2026/11/25 17:01:52",
     "extra": {}
+  },
+  "BTC_short_entry_1795626000000": {
+    "symbol": "BTC",
+    "sig_type": "short_entry",
+    "trigger_time": "11/26 01:00",
+    "notified_at": "2026/11/25 17:21:41",
+    "extra": {}
+  },
+  "SOL_short_entry_1795626000000": {
+    "symbol": "SOL",
+    "sig_type": "short_entry",
+    "trigger_time": "11/26 01:00",
+    "notified_at": "2026/11/25 17:21:41",
+    "extra": {}
+  },
+  "CC_short_entry_1795626000000": {
+    "symbol": "CC",
+    "sig_type": "short_entry",
+    "trigger_time": "11/26 01:00",
+    "notified_at": "2026/11/25 17:21:41",
+    "extra": {}
   }
 }
