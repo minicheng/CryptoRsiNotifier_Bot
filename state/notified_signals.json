@@ -1797,5 +1797,12 @@
     "trigger_time": "11/26 21:00",
     "notified_at": "2026/11/26 13:01:44",
     "extra": {}
+  },
+  "XMR_short_entry_1795672800000": {
+    "symbol": "XMR",
+    "sig_type": "short_entry",
+    "trigger_time": "11/26 14:00",
+    "notified_at": "2026/11/26 13:31:29",
+    "extra": {}
   }
 }
