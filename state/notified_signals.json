@@ -1860,5 +1860,12 @@
     "trigger_time": "11/26 09:00",
     "notified_at": "2026/11/26 01:31:16",
     "extra": {}
+  },
+  "GRAM_short_entry_1795694400000": {
+    "symbol": "GRAM",
+    "sig_type": "short_entry",
+    "trigger_time": "11/26 20:00",
+    "notified_at": "2026/11/26 12:01:44",
+    "extra": {}
   }
 }
