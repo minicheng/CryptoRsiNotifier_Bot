@@ -1636,5 +1636,12 @@
     "trigger_time": "11/27 14:00",
     "notified_at": "2026/11/27 06:01:43",
     "extra": {}
+  },
+  "CC_short_entry_1795759200000": {
+    "symbol": "CC",
+    "sig_type": "short_entry",
+    "trigger_time": "11/27 14:00",
+    "notified_at": "2026/11/27 06:21:40",
+    "extra": {}
   }
 }
