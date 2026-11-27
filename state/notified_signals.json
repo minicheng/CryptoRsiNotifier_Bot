@@ -1629,5 +1629,12 @@
     "trigger_time": "11/27 07:00",
     "notified_at": "2026/11/26 23:31:24",
     "extra": {}
+  },
+  "ETH_short_entry_1795759200000": {
+    "symbol": "ETH",
+    "sig_type": "short_entry",
+    "trigger_time": "11/27 14:00",
+    "notified_at": "2026/11/27 06:01:43",
+    "extra": {}
   }
 }
