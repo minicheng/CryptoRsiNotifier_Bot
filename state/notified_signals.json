@@ -1671,5 +1671,12 @@
     "trigger_time": "11/27 23:00",
     "notified_at": "2026/11/27 15:02:00",
     "extra": {}
+  },
+  "TRX_short_exit_1795795200000": {
+    "symbol": "TRX",
+    "sig_type": "short_exit",
+    "trigger_time": "11/28 00:00",
+    "notified_at": "2026/11/27 16:11:23",
+    "extra": {}
   }
 }
